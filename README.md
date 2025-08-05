@@ -38,10 +38,10 @@
 <td align="right">1</td>
 <td>05/08/2025</td>
 <td>Ter</td>
-<td><ul>
-<li>Apresentação da disciplina.</li>
-<li>
-Dinâmica de acolhimento da turma.</li>
+<td><ul>  
+  <li><a href="https://forms.gle/9XQ8GQ8Y3JVTAaKk6">Questionário (antes da aula).</a></li>
+  <li>Apresentação da disciplina.</li>
+  <li>Dinâmica de acolhimento da turma.</li>
 </ul></td>
 </tr>
 
