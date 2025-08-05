@@ -20,7 +20,7 @@
 ## Sobre a disciplina
 
  - Professora: Andrea Schwertner Charão (andrea@inf.ufsm.br)  
- - Horários: terças e quintas, das 10:30 às 12:30, salas 337 (Prédio 07 - CT) e 258 (Anexo A - CT)
+ - Horários: terças e quintas, das 10:30 às 12:30, salas 361 (Anexo A - CT) e 258 (Anexo A - CT)
  - [Ementa](https://www.ufsm.br/ementario/disciplinas/ELC117): informações institucionais sobre objetivos, programa e bibliografia.
  - [Plano de ensino](https://portal.ufsm.br/documentos/publico/documento.html?id=15522855): planejamento de atividades, sujeito a ajustes.
  - As aulas serão presenciais, com registro de frequência. 
