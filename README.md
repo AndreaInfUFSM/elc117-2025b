@@ -59,7 +59,7 @@
 <td>12/08/2025</td>
 <td>Ter</td>
 <td><ul>
-<li><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2025b/main/classes/04/README.md">Introdução à programação funcional em Haskell:</a> aplicando e definindo funções simples, funções tipadas, listas, funções de alta ordem (higher order), prática haskell01 no GitHub Codespaces.</li>
+<li><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2025b/main/classes/03/README.md">Introdução à programação funcional em Haskell:</a> aplicando e definindo funções simples, funções tipadas, listas, funções de alta ordem (higher order), prática haskell01 no GitHub Codespaces.</li>
 </ul></td>
 </tr>
 
