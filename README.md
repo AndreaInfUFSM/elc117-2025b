@@ -50,7 +50,7 @@
 <td>07/08/2025</td>
 <td>Qui</td>
 <td><ul>
-<li>Visão geral dos paradigmas de programação.</li>
+<li>Visão geral de linguagens e paradigmas de programação: <a href="classes/02">atividade em grupo sobre compreensão de código.</a></li>
 </ul></td>
 </tr>
 
@@ -59,7 +59,7 @@
 <td>12/08/2025</td>
 <td>Ter</td>
 <td><ul>
-<li>Programação funcional (lab).</li>
+<li><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2025b/main/classes/04/README.md">Introdução à programação funcional em Haskell:</a> aplicando e definindo funções simples, funções tipadas, listas, funções de alta ordem (higher order), prática haskell01 no GitHub Codespaces.</li>
 </ul></td>
 </tr>
 
