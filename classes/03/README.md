@@ -90,22 +90,7 @@ Em nuvem (online)
   - https://www.tutorialspoint.com/compile_haskell_online.php
   
 
-### Acesse Codespaces
 
-1. Faça login em sua conta no GitHub
-2. Acesse https://github.com/codespaces
-3. Você verá seus codespaces à esquerda, depois de seguir as instruções na seção [Prática](#prática)
-
-### Acesse "Play with Docker"
-
-
-1. Acesse https://labs.play-with-docker.com/
-2. Crie uma conta / faça Login
-3. Clique em Start
-4. Clique em "+ ADD NEW INSTANCE"
-5. No terminal, digite: `docker run -it haskell bash`
-6. Aguarde a instalação
-7. No terminal, digite `ghci` 
 
 
 ## Aplicando funções pré-definidas
@@ -621,7 +606,7 @@ Instruções
 8. Escreva uma função `calcAreas` que, dada uma lista de valores de raios de círculos, retorne uma lista com a área correspondente a cada raio.
 
 
-### Extra (TestMyFunctions.hs)
+### Teste automatizado de funções
 
 - O programa `TestMyFunctions.hs` usa uma biblioteca de teste automatizado de software (HUnit) para testar as funções que você criou.
 
