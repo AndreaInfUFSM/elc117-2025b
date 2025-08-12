@@ -60,6 +60,8 @@
 <td>Ter</td>
 <td><ul>
 <li><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2025b/main/classes/03/README.md">Introdução à programação funcional em Haskell:</a> aplicando e definindo funções simples, funções tipadas, listas, funções de alta ordem (higher order), prática haskell01 no GitHub Codespaces.</li>
+<li>Apresentação de exercício: <a href="https://github.com/elc117/apresentacao-bim1-2025b-MarcoSoaresL">Marco</a></li>
+<li>Apresentação de exercício: <a href="hhttps://github.com/elc117/apresentacao-bim1-2025b-TiagoSteffler">Tiago</a></li>
 </ul></td>
 </tr>
 
@@ -68,7 +70,7 @@
 <td>14/08/2025</td>
 <td>Qui</td>
 <td><ul>
-<li>Programação funcional.</li>
+<li><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2025b/main/classes/04/README.md">Fundamentos da programação funcional</a>: como a teoria se reflete nos códigos</li>
 </ul></td>
 </tr>
 

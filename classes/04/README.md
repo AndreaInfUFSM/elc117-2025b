@@ -142,7 +142,7 @@ Apesar de ser uma operação simples, este trecho de código ilustra vários rec
 Linguagem funcional, declarativa
 
 - Programa equivalente ao anterior
-- Mesmo sem conhecer a linguagem, o que você consegue entender?
+- Mesmo sem conhecer bem a linguagem, o que você consegue entender?
 
 
 
@@ -283,7 +283,7 @@ Em português:
 
 #### Exemplos em C
 
-Ver [código 02](../02/02/side-effect.c) da aula anterior
+Ver [código 02](../02/02/side-effect.c) de uma aula anterior
 
 
 1. Função em C **sem efeito colateral** (pura), como função matemática:
@@ -344,7 +344,7 @@ Efeitos colaterais:
 - Podem ser minimizados com boas práticas de programação
 - Podem ser evitados com programação funcional
 
-No código [02](../02/02/side-effect.c) da aula anterior:
+No código [02](../02/02/side-effect.c) de uma aula anterior:
 
 - Este código tem muitos efeitos colaterais. Qual será sua saída?
 
@@ -354,7 +354,7 @@ Para responder exatamente qual será a saída deste código, você precisa rastr
               --{{0}}--
 Fazer isso é um bom exercício quando se está aprendendo como funciona a execução de um programa, mas quando se está programando profissionalmente, boas práticas prezam por legibilidade e simplicidade (ou seja, você precisa se preocupar não só em escrever um código que funcione, mas que também facilite sua compreensão).
 
-- De 6 grupos que analisaram este código, 4 acertaram, 2 erraram
+- De 6 grupos que analisaram este código em outro semestre, 4 acertaram, 2 erraram
 
 ![](img/side-effects-problem.png)
 
@@ -748,7 +748,7 @@ Observações:
 
   - Python, JavaScript/TypeScript, Java, C#: são multi-paradigma, com recursos de programação funcional
 
-- Outras modernas mas não muito conhecidas:
+- Outras modernas mas não tão conhecidas:
 
   - Clojure, Scala, F#, Erlang, Elixir, etc.
 
