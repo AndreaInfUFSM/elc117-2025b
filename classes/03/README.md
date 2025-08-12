@@ -62,6 +62,15 @@ Alguns destaques da linguagem (contraste com C):
 Fonte: https://digibarn.com/collections/posters/tongues/
 
 
+## Convite: ACM Tech Talk (20/08/25)
+
+- Functional Programming in Financial Markets
+- Wed, Aug 20, 2025 12:00 PM -03
+- Inscreva-se [aqui](
+https://events.zoom.us/ev/ArYZWTHwHadF1z5rFGmggUTZiZcBn08S86TAk2t3vsjUSgYSY6Mt~AglGQ71j0a2GnjEYXo0S5S9Kwqezl26KKT5Tif00hENXAQMrQLF9fFjFaA)
+
+> We present a case-study of using functional programming in the real world at a very large scale. At Standard Chartered Bank, Haskell is used in a core software library supporting the entire Markets division – a business line with 3 billion USD operating income in 2023. Typed functional programming is used across the entire tech stack, including foundational APIs and CLIs for deal valuation and risk analysis, server-side components for long-running batches or sub-second RESTful services, and end-user GUIs. Thousands of users across Markets interact with software built using functional programming, and over one hundred write functional code.
+
 ## Ambiente de execução
 
 
