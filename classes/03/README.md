@@ -52,7 +52,7 @@ Alguns destaques da linguagem (contraste com C):
 
 - Criada em ~1987, vários autores, nome em homenagem a matemático Haskell Curry
 - Linguagem **puramente funcional** (funções sem efeitos colaterais, dados imutáveis)
-- Fortemente tipada, mas com inferência de tipos
+- Fortemente tipada, mas com **inferência** de tipos
 - Suporta **listas nativamente** (estrutura/tipo de dado nativo)
 - Ambiente de execução: compilador e ambiente interpretador interativo (GHCi)
 
@@ -91,7 +91,10 @@ Em nuvem (online)
   
 
 
+### Crie seu ambiente para esta aula
 
+- Nossas práticas em Haskell serão no GitHub Codespaces.
+- Para criar seu repositório com os arquivos desta prática, acesse https://classroom.github.com/a/oYbNzGLV
 
 ## Aplicando funções pré-definidas
 
@@ -102,7 +105,7 @@ Em nuvem (online)
 
 Fonte: https://datateknik-lth.github.io/courses/EDAN40-functional/edan40-prelude-cheat-sheet.pdf
 
-### Sintaxe geral
+### Sintaxe geral de aplicação
 
 > Sintaxe para aplicar função a argumentos: 
 > 
@@ -120,7 +123,7 @@ Dissecando o código:
 Exemplos no ambiente interativo GHCi:
 
 ``` text
-GHCi, version 9.0.2: http://www.haskell.org/ghc/  :? for help
+GHCi, version 9.12.2: http://www.haskell.org/ghc/  :? for help
 Prelude> sqrt 4
 2.0
 Prelude> sqrt 4-1
@@ -133,7 +136,7 @@ Prelude> sqrt 4-1
 Parênteses alteram a ordem de precedência das operações!
 
 ``` text
-GHCi, version 9.0.2: http://www.haskell.org/ghc/  :? for help
+GHCi, version 9.12.2: http://www.haskell.org/ghc/  :? for help
 Prelude> sqrt 4-1
 1.0
 Prelude> sqrt (4-1)
@@ -171,7 +174,7 @@ Digite os exemplos 1 a 5, um de cada vez:
 - Sintaxe para definir funções é simples, difere bastante da linguagem C
 - Como em C, usamos símbolos para expressar o nome dos argumentos
 
-### Sintaxe geral
+### Sintaxe geral de definição
 
 Sintaxe geral para definir uma função **não-tipada** / **sem tipo explícito**:
 
@@ -180,7 +183,7 @@ Sintaxe geral para definir uma função **não-tipada** / **sem tipo explícito*
 Exemplos no ambiente interativo GHCi:
 
 ``` text
-GHCi, version 9.0.2: http://www.haskell.org/ghc/  :? for help
+GHCi, version 9.12.2: http://www.haskell.org/ghc/  :? for help
 Prelude> f x = x+4
 Prelude> f 3
 7
@@ -265,7 +268,7 @@ Exemplos:
 Exemplo 1: Função que adiciona uma constante
 
 ``` text
-GHCi, version 9.0.2: http://www.haskell.org/ghc/  :? for help
+GHCi, version 9.12.2: http://www.haskell.org/ghc/  :? for help
 Prelude> func x = x + 4
 Prelude> func 3
 7
@@ -276,7 +279,7 @@ Prelude> map func [1,2,3]
 Exemplo 2: Funções booleanas que comparam caracter com espaço
 
 ``` text
-GHCi, version 9.0.2: http://www.haskell.org/ghc/  :? for help
+GHCi, version 9.12.2: http://www.haskell.org/ghc/  :? for help
 Prelude> nospace c = c /= ' '
 Prelude> space c = c == ' '
 Prelude> nospace 'a'
@@ -301,7 +304,7 @@ Prelude> map nospace "ha ha"
 Exemplo: Usando map e filter
 
 ``` text
-GHCi, version 9.0.2: http://www.haskell.org/ghc/  :? for help
+GHCi, version 9.12.2: http://www.haskell.org/ghc/  :? for help
 Prelude> nospace c = c /= ' '
 Prelude> filter nospace "ha ha"
 "haha"
