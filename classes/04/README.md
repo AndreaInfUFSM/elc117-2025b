@@ -704,10 +704,19 @@ Resultado:
 (2 3)
 ```
 
-Observações:
+Descubra:
 
-- Função `car`: retorna primeiro elemento da lista (head)
-- Função `cdr`: retorna o restante da lista, sem o primeiro (tail)
+<details>
+  <summary style="color:Grey;font-size: smaller">O que faz a função car?</summary>
+  <p>Retorna primeiro elemento da lista (head). Vem do inglês "Contents of the Address Register", um termo hoje pouco intuitivo, relacionado à implementação, que fazia sentido na época em que foi criado</p>
+</details> 
+
+<details>
+  <summary style="color:Grey;font-size: smaller">O que faz a função car?</summary>
+  <p>Retorna o restante da lista, sem o primeiro (tail). Vem do inglês "Contents of the Decrement Register", um termo hoje pouco intuitivo, relacionado à implementação, que fazia sentido na época em que foi criado</p>
+</details> 
+
+
 
 
 ### Haskell
