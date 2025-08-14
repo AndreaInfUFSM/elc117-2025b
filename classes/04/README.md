@@ -14,6 +14,8 @@ comment:  Material de apoio para a disciplina
           da Universidade Federal de Santa Maria
 
 translation: English  translations/English.md
+
+classroom: true
 -->
 
 <!--
@@ -777,6 +779,6 @@ Leituras complementares:
 
   um artigo opinativo para público não especializado
 
-- Richard Pawson. [Confused about: Subroutine, Procedure, Function, and Method?](https://www.computingatschool.org.uk/news-and-blogs/2023/july/confused-about-subroutine-procedure-function-and-methodeur) 
+- Richard Pawson. [Confused about: Subroutine, Procedure, Function, and Method?](https://www.computingatschool.org.uk/forum-news-blogs/2023/july/confused-about-subroutine-procedure-function-and-method/) 
 
   um artigo para professores de Educação Básica (!) no Reino Unido
