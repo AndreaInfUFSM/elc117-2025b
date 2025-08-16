@@ -416,6 +416,6 @@ Avaliações finais / atividades de recuperação de avaliações: 04/12 e 09/12
 
 ### Links Interessantes
 
-- [The Computer Language Benchmarks Game](https://benchmarksgame-team.pages.debian.net/benchmarksgame/index.html): grande comparativo de desempenho entre várias linguagens, com diferentes benchmarks e configurações
+- [The Computer Language Benchmarks Game](https://benchmarksgame-team.pages.debian.net/benchmarksgame/index.html): grande comparativo de desempenho entre várias linguagens, com diferentes benchmarks e configurações. Avaliar desempenho não é trivial, cuidado para não tirar conclusões apressadas 🤔
 
 <p align="right">(<a href="#readme-top">início</a>)</p>
