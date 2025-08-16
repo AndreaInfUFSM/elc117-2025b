@@ -414,3 +414,8 @@ Avaliações finais / atividades de recuperação de avaliações: 04/12 e 09/12
  - Outros materiais de referência indicados nas aulas.
 <p align="right">(<a href="#readme-top">início</a>)</p>
 
+### Links Interessantes
+
+- [The Computer Language Benchmarks Game](https://benchmarksgame-team.pages.debian.net/benchmarksgame/index.html): grande comparativo de desempenho entre várias linguagens, com diferentes benchmarks e configurações
+
+<p align="right">(<a href="#readme-top">início</a>)</p>
