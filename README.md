@@ -60,8 +60,7 @@
 <td>Ter</td>
 <td><ul>
 <li><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2025b/main/classes/03/README.md">Introdução à programação funcional em Haskell:</a> aplicando e definindo funções simples, funções tipadas, listas, funções de alta ordem (higher order), prática haskell01 no GitHub Codespaces.</li>
-<li>Apresentação de exercício: <a href="https://github.com/elc117/apresentacao-bim1-2025b-MarcoSoaresL">Marco</a></li>
-<li>Apresentação de exercício: <a href="https://github.com/elc117/apresentacao-bim1-2025b-TiagoSteffler">Tiago</a></li>
+<li>Apresentação de exercícios (interpretador/compilador): <a href="https://github.com/elc117/apresentacao-bim1-2025b-MarcoSoaresL">Marco</a> e <a href="https://github.com/elc117/apresentacao-bim1-2025b-TiagoSteffler">Tiago</a></li>
 </ul></td>
 </tr>
 
@@ -71,8 +70,7 @@
 <td>Qui</td>
 <td><ul>
 <li><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2025b/main/classes/04/README.md">Fundamentos da programação funcional</a>: como a teoria se reflete nos códigos</li>
-<li>Apresentação de exercício: <a href="https://github.com/elc117/apresentacao-bim1-2025b-avilxrd">Miguel</a></li>
-<li>Apresentação de exercício: <a href="https://github.com/elc117/apresentacao-bim1-2025b-SamSteffler">Samuel</a></li>
+<li>Apresentação de exercícios (efeitos colaterais e dados imutáveis): <a href="https://github.com/elc117/apresentacao-bim1-2025b-avilxrd">Miguel</a> e <a href="https://github.com/elc117/apresentacao-bim1-2025b-SamSteffler">Samuel</a></li>
 </ul></td>
 </tr>
 
@@ -81,7 +79,9 @@
 <td>19/08/2025</td>
 <td>Ter</td>
 <td><ul>
-<li>Programação funcional (lab).</li>
+<li>Continuação da prática haskell01 da aula 3 (ver link da prática nos slides)</li>
+<li><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2025b/main/classes/05/README.md">Quizzes sobre programação funcional em Haskell</a></li>
+<li>Apresentação de exercícios (haskell01): <a href="https://github.com/elc117/apresentacao-bim1-2025b-GabrielSaueressig">Gabriel</a> e <a href="https://github.com/elc117/haskell01-2025b-nilokao">Nicolas</a></li>
 </ul></td>
 </tr>
 
