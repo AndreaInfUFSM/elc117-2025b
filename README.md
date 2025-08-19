@@ -81,7 +81,7 @@
 <td><ul>
 <li>Continuação da prática haskell01 da aula 3 (ver link da prática nos slides)</li>
 <li><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2025b/main/classes/05/README.md">Quizzes sobre programação funcional em Haskell</a></li>
-<li>Apresentação de exercícios (haskell01): <a href="https://github.com/elc117/apresentacao-bim1-2025b-GabrielSaueressig">Gabriel</a> e <a href="https://github.com/elc117/haskell01-2025b-nilokao">Nicolas</a></li>
+<li>Apresentação de exercícios (haskell01): <a href="https://github.com/elc117/apresentacao-bim1-2025b-GabrielSaueressig">Gabriel</a> e <a href="https://github.com/elc117/apresentacao-bim1-2025b-nilokao">Nicolas</a></li>
 </ul></td>
 </tr>
 
