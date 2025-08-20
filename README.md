@@ -90,7 +90,8 @@
 <td>21/08/2025</td>
 <td>Qui</td>
 <td><ul>
-<li>Programação funcional.</li>
+<li><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2025b/main/classes/06/README.md">Programação funcional em Haskell:</a> quiz e exemplo de programa completo</li>
+<li>Apresentação de exercícios (codeworld): <a href="https://github.com/elc117/apresentacao-bim1-2025b-julio-mansan2">Júlio</a> e <a href="https://github.com/elc117/apresentacao-bim1-2025b-Renatronis">Renato</a></li>
 </ul></td>
 </tr>
 
