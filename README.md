@@ -100,7 +100,8 @@
 <td>26/08/2025</td>
 <td>Ter</td>
 <td><ul>
-<li>Programação funcional (lab).</li>
+<li><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2025b/main/classes/07/README.md">Mais sobre programação funcional em Haskell</a>: funções de alta ordem (map, filter, foldr1/foldl1, zipWith), funções anônimas/lambda, tuplas, prática no Codespaces</li>
+<li>Apresentação de exercícios (cordeworld e tuplas): <a href="https://github.com/elc117/apresentacao-bim1-2025b-Renatronis">Renato</a>, <a href="https://github.com/elc117/apresentacao-bim1-2025b-HLKellermann">Helena</a> e <a href="https://github.com/elc117/apresentacao-bim1-2025b-rnnr11">João Pedro</a></li>
 </ul></td>
 </tr>
 
@@ -109,8 +110,7 @@
 <td>28/08/2025</td>
 <td>Qui</td>
 <td><ul>
-<li>Programação funcional.</li>
-</ul></td>
+<li><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2025b/main/classes/08/README.md">Programas maiores em Haskell</a>: uso de let e where, exemplo de validação de CPF, prática no Codespaces</li></ul></td>
 </tr>
 
 <tr>
