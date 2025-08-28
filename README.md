@@ -110,7 +110,10 @@
 <td>28/08/2025</td>
 <td>Qui</td>
 <td><ul>
-<li><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2025b/main/classes/08/README.md">Programas maiores em Haskell</a>: uso de let e where, exemplo de validação de CPF, prática no Codespaces</li></ul></td>
+<li><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2025b/main/classes/08/README.md">Programas maiores em Haskell</a>: uso de let e where, exemplo de validação de CPF, prática no Codespaces</li>
+<li>Apresentação de exercícios: <a href="https://github.com/elc117/apresentacao-bim1-2025b-DiogoDDSantos">Diogo</a> (aplicação parcial) e <a href="https://github.com/elc117/apresentacao-bim1-2025b-bernardotbot">Bernardo</a> (lista de exercícios)
+</li>
+</ul></td>
 </tr>
 
 <tr>
