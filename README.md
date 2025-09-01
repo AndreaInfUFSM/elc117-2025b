@@ -121,7 +121,8 @@
 <td>02/09/2025</td>
 <td>Ter</td>
 <td><ul>
-<li>Programação funcional (lab).</li>
+<li><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2025b/main/classes/09/README.md">Exercícios, muitos exercícios!</a></li>
+<li>Apresentação de exercícios: <a href="https://github.com/elc117/apresentacao-bim1-2025b-lucassbertol">Lucas</a> (exercícios da última prática) e <a href="https://github.com/elc117/apresentacao-bim1-2025b-OtavioZimmer">Otávio</a> (validação de CPF)
 </ul></td>
 </tr>
 
