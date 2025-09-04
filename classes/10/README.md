@@ -778,7 +778,7 @@ Tente responder estas questões **sem consultar nenhum material**. Caso responda
    - [[?]] A expressão declara uma lista formada por valores de 2*y tal que y pertence a lista [2,3,4].
 
 
-2. A expressão abaixo é equivalente a aplicar filter em [2..4] e passar o resultado para map (2*y)?
+2. A expressão abaixo é equivalente a aplicar filter even em [2..4] e passar o resultado para map (2*y)?
 
    ```
    [2*y | y <- [2..4], even y]
