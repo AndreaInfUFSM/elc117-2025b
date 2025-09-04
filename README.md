@@ -131,7 +131,8 @@
 <td>04/09/2025</td>
 <td>Qui</td>
 <td><ul>
-<li>Programação funcional.</li>
+<li><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2025b/main/classes/10/README.md">Mais sobre programação funcional em Haskell</a>: geração de listas, list comprehension, quizzes, prática no Codespaces</li>
+<li>Apresentação de exercícios (list comprehensions): <a href="https://github.com/elc117/apresentacao-bim1-2025b-brucvei">Bruna</a> e Josias
 </ul></td>
 </tr>
 
