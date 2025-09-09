@@ -141,7 +141,7 @@
 <td>09/09/2025</td>
 <td>Ter</td>
 <td><ul>
-<li>Apresentação de exercícios (Scotty): <a href="https://github.com/elc117/apresentacao-bim1-2025b-raffaelafl">Raffaela</a>, <a href="https://github.com/elc117/apresentacao-bim1-2025b-arturfardin">Artur</a> e <a href="https://github.com/elc117/apresentacao-bim1-2025b-mateus-250402">Mateus</a>
+<li>Apresentação de exercícios (Scotty): <a href="https://github.com/elc117/apresentacao-bim1-2025b-raffaelafl">Raffaela</a>, <a href="https://github.com/elc117/apresentacao-bim1-2025b-arturfardin">Artur</a> e <a href="https://github.com/elc117/apresentacao-bim1-2025b-mateus250402">Mateus</a>
 <li><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/elc117/demo-scotty-codespace-2025b/main/README.md">Web Service em Haskell</a></li>
 <li>Orientações sobre atividade personalizada</li>
 </ul></td>
