@@ -423,14 +423,16 @@ Deduções?!
 
 
 ![IBM Watson](img/ibmwatson.png) **Um produto: IBM Watson**  
-<https://www.ibm.com/watson>
+https://www.ibm.com/watson
 
 ![Bastidores do IBM Watson](img/watson-article.png) **Bastidores do IBM Watson**  
-<https://logicprogramming.org/2011/03/natural-language-processing-with-prolog-in-the-ibm-watson-system/>  
+https://logicprogramming.org/2011/03/natural-language-processing-with-prolog-in-the-ibm-watson-system/  
 On February 14–16, 2011, the IBM Watson question answering system won the Jeopardy! Man vs. Machine Challenge by defeating two former grand champions, Ken Jennings and Brad Rutter.
 
+
+
 ![Uma experiência atual](img/gpt-watson.png) **Uma experiência atual**  
-<https://www.linkedin.com/pulse/chatgpt-v-ibm-watson-jeopardy-cass-sapir/>  
+https://www.linkedin.com/pulse/chatgpt-v-ibm-watson-jeopardy-cass-sapir/  
 ChatGPT x IBM Watson: experiências com ChatGPT respondendo questões do Jeopardy!
 
 
