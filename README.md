@@ -153,7 +153,7 @@
 <td>Qui</td>
 <td><ul>
 <li><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2025b/main/classes/12/README.md">Programação lógica com Prolog</a>: fatos, regras e consultas</li>
-
+<li>Apresentação de exercícios (Prolog): <a href="https://github.com/elc117/apresentacao-bim1-2025b-jap05">José Arthur</a>, <a href="https://github.com/elc117/apresentacao-bim1-2025b-Mufh">Josias</a> e <a href="https://github.com/elc117/apresentacao-bim1-2025b-MichelAltmann">Michel</a>
 </ul></td>
 </tr>
 
