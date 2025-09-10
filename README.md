@@ -152,7 +152,8 @@
 <td>11/09/2025</td>
 <td>Qui</td>
 <td><ul>
-<li>Programação lógica.</li>
+<li><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2025b/main/classes/12/README.md">Programação lógica com Prolog</a>: fatos, regras e consultas</li>
+
 </ul></td>
 </tr>
 
