@@ -402,7 +402,7 @@ Características:
 - Programas são compostos por cláusulas que permitem deduções
 - **Prolog** é a principal linguagem (propósito geral)
 
-Deduções?!
+### Deduções?!
 
 - Obtenção de informações que não estão explícitas... 
 - Exemplo:
@@ -418,7 +418,7 @@ Deduções?!
 - Sistemas especialistas, bancos de dados inteligentes, processamento de linguagem natural, chatbots...
 
 <br>
-<h5>Exemplo de aplicação</h5>
+<h5>Exemplos de aplicações</h5>
 <br>
 
 
@@ -462,8 +462,7 @@ ChatGPT x IBM Watson: experiências com ChatGPT respondendo questões do Jeopard
 ### Prolog no Codespaces
 
 - Vamos utilizar o interpretador do SWI-Prolog no Codespaces
-- Para criar seu Codespace, acesse: https://classroom.github.com/a/h8Ij4E9P
-
+- Para criar seu Codespace, acesse: https://classroom.github.com/a/v4d9hhqI
 
 ### Basics
 
@@ -474,6 +473,8 @@ Um programa em Prolog é composto por definições de **predicados** (verificáv
 paradigmer(diana).
 inteligente(X) :- paradigmer(X).
 ```
+@LIA.prolog_withShell
+
 
 ``` prolog
 ?- inteligente(diana).
@@ -485,6 +486,9 @@ true.
 - Cláusulas são terminadas por um **ponto final** (`.`) (Prolog não usa chaves ou indent para delimitação)
 - Execução do programa é uma **consulta**
 
+
+#### Resumo de conceitos
+
 | Conceito | Exemplo | Prolog |
 | -------- | ------- | ------ |
 | Fato | "Diana Prince é estudante de Paradigmas" | `paradigmer(diana).` |
@@ -494,20 +498,18 @@ true.
 
 ### Predicados
 
-Aqui temos 2 predicados:
+Aqui temos 2 predicados: `paradigmer` e `inteligente`
 
 ``` prolog
 paradigmer(diana).
 inteligente(X) :- paradigmer(X).
 ```
-``` prolog
-?- inteligente(diana).
-```
+@LIA.prolog_withShell
 
 - Predicados são a base das instruções em Prolog
 - Forma geral: `nomedopredicado(arg1, arg2, ...)`
 - Predicados se diferenciam pelo nome (case-sensitive) e quantidade de argumentos
-- Nome de predicado usado em **fatos**, **regras**, **consultas**
+- Nomes de predicados são usados em **fatos**, **regras**, **consultas**
 - Argumentos não têm tipo explícito e podem ser **constantes** ou **variáveis**
 
   - Constantes são valores simbólicos: inicial minúscula (ex.: `joaozinho`), números (ex.: `9`, `-8`, `22.3`), strings (ex.: `"ABC"`), listas (`[a,b]`)
@@ -521,7 +523,7 @@ inteligente(X) :- paradigmer(X).
 - São cláusulas com apenas um predicado, uma parte (ao contrário das regras que têm 2 partes)
 - Sintaxe: sempre terminam com ponto final (`.`)
 
-```Prolog
+``` prolog
 idade(diana, 5000).
 idade(clark, 22).
 paradigmer(diana).
@@ -531,6 +533,7 @@ nacionalidade(diana, themyscira).
 mae(diana, hippolyta).
 planeta(krypton).
 ```
+@LIA.prolog_withShell
 
 ### Consultas
 
@@ -538,7 +541,19 @@ planeta(krypton).
 - Buscam resposta, que pode ser `true`/`false` ou valor para variável
 - Sintaxe: sempre terminam com ponto final (`.`)
 
-```Prolog
+``` prolog
+idade(diana, 5000).
+idade(clark, 22).
+paradigmer(diana).
+paradigmer(clark).
+nacionalidade(clark, krypton).
+nacionalidade(diana, themyscira).
+mae(diana, hippolyta).
+planeta(krypton).
+```
+@LIA.prolog_withShell
+
+``` prolog
 ?- paradigmer(diana).
 true
 ?- paradigmer(outronome).
@@ -550,7 +565,19 @@ false
 - Consultas podem ter variáveis
 - Se houver valor que satisfaça a consulta, ele será vinculado à variável
 
-```Prolog
+``` prolog
+idade(diana, 5000).
+idade(clark, 22).
+paradigmer(diana).
+paradigmer(clark).
+nacionalidade(clark, krypton).
+nacionalidade(diana, themyscira).
+mae(diana, hippolyta).
+planeta(krypton).
+```
+@LIA.prolog_withShell
+
+``` prolog
 ?- planeta(X).
 X = krypton
 ?- idade(diana,I).
@@ -563,8 +590,7 @@ I = 5000
 - Ponto-e-vírgula (`;`) serve para buscar outra resposta no interpretador
 - Significa "ou" e pode ser usado também em regras
 
-
-```Prolog
+``` prolog
 ?- paradigmer(X).
 X = diana ;
 X = clark
@@ -622,36 +648,40 @@ Exemplo (em português):
 
 Em Prolog:
 
-```Prolog
+``` prolog
 ave(X) :- papagaio(X) ; coruja(X). 
 ```
+@LIA.prolog_withShell
 
 Outra opção (muito usada) é expressar o "OU" na forma de definições alternativas para o predicado:
 
-```Prolog
+``` prolog
 ave(X) :- papagaio(X).
 ave(X) :- coruja(X).
 ```
-
+@LIA.prolog_withShell
 
 ### Operadores relacionais (com números)
 
 Em regras ou consultas, podemos usar operadores relacionais, que comparam valores e resultam verdadeiro ou falso.
 
 
-Exemplos de consultas com o predicado `idade` definido pelos fatos mais abaixo:
+Exemplos de consultas com o predicado `idade` definido pelos fatos abaixo:
 
 
-```Prolog
-?- idade(N,X), X =< 30.
-?- idade(N,X), X > 25, X < 30.
-```
-
-```Prolog
+``` prolog
 idade(pedro,35).
 idade(ana,30).
 idade(paulo,27).
 ```
+@LIA.prolog_withShell
+
+``` prolog
+?- idade(N,X), X =< 30.
+?- idade(N,X), X > 25, X < 30.
+```
+
+
 
 Se estivermos trabalhando com **números**, podemos usar estes operadores:
 
@@ -672,11 +702,12 @@ Se estivermos trabalhando com **números**, podemos usar estes operadores:
 - Esse operador faz com que as expressões aritméticas sejam avaliadas pelo interpretador
 - Sem esse operador, as expressões aritméticas são tratadas como símbolos agrupados, sem execução de cálculos
 
-```Prolog
+``` prolog
 soma(A,B,C) :- C is A + B.
 ```
+@LIA.prolog_withShell
 
-```Prolog
+``` prolog
 ?- soma(1, 4, C).
 C = 5
 ```
@@ -686,14 +717,15 @@ C = 5
 
 ### Regras com aritmética
 
-```Prolog
+``` prolog
 raio(chafariz, 5).
 raio(piscina, 3).
 
 area(X,A) :- raio(X,R), A is pi*R^2.
 ```
+@LIA.prolog_withShell
 
-```Prolog
+``` prolog
 ?- area(piscina,A).
 A = 28.274333882308138.
 
