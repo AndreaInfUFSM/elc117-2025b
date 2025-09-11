@@ -143,7 +143,7 @@
 <td><ul>
 <li>Apresentação de exercícios (Scotty): <a href="https://github.com/elc117/apresentacao-bim1-2025b-raffaelafl">Raffaela</a>, <a href="https://github.com/elc117/apresentacao-bim1-2025b-arturfardin">Artur</a> e <a href="https://github.com/elc117/apresentacao-bim1-2025b-mateus250402">Mateus</a>
 <li><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/elc117/demo-scotty-codespace-2025b/main/README.md">Web Service em Haskell</a></li>
-<li>Orientações sobre atividade personalizada</li>
+<li><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2025b/main/classes/11/README.md">Orientações sobre produção individual personalizada</li>
 </ul></td>
 </tr>
 
@@ -399,7 +399,7 @@ Primeiro bimestre:
 
 - Prova de leitura/escrita de código (peso 5): 25/09
 - Apresentação de exercícios (peso 2)
-- Produção individual personalizada (peso 3): 28/09
+- [Produção individual personalizada](https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2025b/main/classes/11/README.md) (peso 3): 28/09
 
 Segundo bimestre:
 
