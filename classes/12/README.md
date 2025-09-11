@@ -443,7 +443,7 @@ ChatGPT x IBM Watson: experiências com ChatGPT respondendo questões do Jeopard
 - Motivações persistem até hoje (por exemplo: ["Alexa, How Can I Reason with Prolog?"](https://drops.dagstuhl.de/opus/volltexte/2019/10884/pdf/OASIcs-SLATE-2019-17.pdf))
 - Ver árvore genealógica das linguagens: https://www.digibarn.com/collections/posters/tongues/tongues.jpg
 
-
+![Imagem de uma árvore genealógica de linguagens, disponível em: www.digibarn.com/collections/posters/tongues/tongues.jpg](img/tongues.jpg)
 
 ## Prolog
 
