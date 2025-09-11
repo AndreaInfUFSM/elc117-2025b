@@ -458,6 +458,7 @@ ChatGPT x IBM Watson: experiências com ChatGPT respondendo questões do Jeopard
   - tem ambiente online (SWISH): https://swish.swi-prolog.org/
   - vários ambientes em nuvem, incluindo Codespaces
 
+![Screenshot da landing page www.swi-prolog.org](img/swi-prolog.png)
 
 ### Prolog no Codespaces
 
