@@ -54,8 +54,8 @@ Avaliação no primeiro bimestre:
 ## Tema: Backend Web com Scotty
 
 
-- Tema: desenvolver um serviço web que responda a requisições get/post usando Scotty, com ou sem banco de dados
-- Conforme visto em aula, Scotty é uma biblioteca em Haskell para construção de backend web (inclui seu próprio servidor HTTP)
+- Tema: desenvolver um serviço web que responda a requisições (GET, POST, etc.) usando Scotty, com ou sem banco de dados
+- Conforme visto em aula, Scotty é uma biblioteca em Haskell para construção de backend web 
 
   - Ver mais sobre isso [nesta aula](https://liascript.github.io/course/?https://raw.githubusercontent.com/elc117/demo-scotty-codespace-2025b/main/README.md)
 
@@ -69,7 +69,7 @@ Avaliação no primeiro bimestre:
   - Somente leitura (get): conversões, sorteios, buscas, quizzes, etc.
   - Leitura / escrita (get/post/put/delete, com persistência em banco de dados): leaderboard para game, log para quizzes/games, listas de tarefas, etc.
 
-- Opcionais sempre bem-vindos: desde que atenda aos objetivos e requisitos do trabalho, você pode adicionar quaisquer opcionais que desejar (frontend, deploy, comparações com outras linguagens, configurações avançadas de projeto, etc.).
+- Opcionais sempre bem-vindos: desde que atenda aos objetivos e requisitos do trabalho, você pode adicionar quaisquer opcionais que desejar (frontend, deploy em nuvem (fora do Codespaces), comparações com outras linguagens, configurações avançadas de projeto, etc.).
 
 ### Outros
 
