@@ -361,12 +361,12 @@ B = 2.
 ?- A = 1, A = A + 1.
 false.
 
-?- A = [1,2], length(A,L).
-A = [1, 2],
-L = 2.
+?- L = [1,2], length(L,Len).
+L = [1, 2],
+Len = 2.
 
-?- A = [1,2,X], X is 2+1.
-A = [1, 2, 3],
+?- L = [1,2,X], X is 2+1.
+L = [1, 2, 3],
 X = 3.
 
 ?- casa(_, azul, _) = casa(bob, _, gato).
@@ -672,7 +672,11 @@ Len = 1.
 
 ### Programa `movies.pl`
 
-Baixe o programa [movies.pl](src/movies.pl) e adicione-o no seu Codespace de Prolog.
+Baixe o programa [movies.pl](src/movies.pl) no seu Codespace de Prolog:
+
+``` bash
+wget https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2025b/main/classes/13/src/movies.pl
+```
 
 Este código em Prolog declara os seguintes predicados sobre filmes:
 
