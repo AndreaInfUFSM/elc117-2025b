@@ -162,7 +162,9 @@
 <td>16/09/2025</td>
 <td>Ter</td>
 <td><ul>
-<li>Programação lógica (lab).</li>
+<li><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2025b/main/classes/13/README.md">Programação lógica com Prolog</a>: unificação, listas, puzzles, prática com base de filmes</li>
+<li>Apresentação de exercícios (Prolog): <a href="https://github.com/elc117/apresentacao-bim1-2025b-Adrian351lang">Adrian</a>, <a href="https://github.com/elc117/apresentacao-bim1-2025b-Bbock2511">Bruno B.</a> e <a href="https://github.com/elc117/apresentacao-bim1-2025b-RPFacco">Ricardo</a>
+<li><a href="https://github.com/elc117/demo-prolog-dfs-2025b">Visualização da execução:</a> mecanismo de busca em profundidade</li>
 </ul></td>
 </tr>
 
