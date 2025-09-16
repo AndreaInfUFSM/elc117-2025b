@@ -668,7 +668,7 @@ Len = 1.
 
 
 
-## Prática com fatos, regras e consultas
+## Prática: `movies.pl`
 
 ### Programa `movies.pl`
 
@@ -1025,13 +1025,10 @@ No final do arquivo `movies.pl`:
 
 
 
-## Prática com listas 
+### Consultas com listas
 
 Como já vimos, Prolog suporta listas nativamente.  No programa `movies.pl`, há alguns predicados que manipulam listas.
 
-Avance para testar esses predicados e adicionar outro.
-
-### Teste e adicione
 
 Teste as seguintes consultas:
 
@@ -1048,7 +1045,10 @@ Teste as seguintes consultas:
    
    `?- countgenres(C).`
 
-4. Com base nos códigos anteriores, adicione um predicado para contar o número de usuários na base de dados.
+
+### Adicione regra com lista
+
+Com base nos códigos anteriores, adicione um predicado (definido por uma regra) para contar o número de usuários na base de dados.
 
 
 
