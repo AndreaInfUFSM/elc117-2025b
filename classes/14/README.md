@@ -24,11 +24,10 @@ script:   https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js
 <!--
 nvm use v14.21.1
 liascript-devserver --input README.md --port 3001 --live
-https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2024b/master/classes/13/README.md
 -->
 
 
-[![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2024b/main/classes/13/README.md)
+[![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2025b/main/classes/14/README.md)
 
 
 # Programação Lógica (3)
@@ -120,7 +119,7 @@ Actress = jennifer_lawrence.
 A consulta abaixo responde à pergunta: "Há quantos anos foi lançado o filme `big_fish`"?
 
 ```
-?- movie(big_fish), Idade is 2024 - A.
+?- movie(big_fish), Idade is 2025 - A.
 ```
 
 - [( )] Sim
@@ -132,7 +131,7 @@ Não, porque o predicado `movie` tem 3 argumentos, mas nesse exemplo só foi pas
 A seguir uma consulta correta para responder à pergunta:
 
 ```
-?- movie(_,big_fish,A), Idade is 2024 - A.
+?- movie(_,big_fish,A), Idade is 2025 - A.
 A = 2003,
 Idade = 21.
 ```
@@ -196,9 +195,13 @@ Este predicado:
 
 
 
-## Prática
+## Prática: `songs.pl`
 
-Baixe o programa [songs.pl](src/songs.pl) e adicione-o no seu Codespace de Prolog.
+Baixe o programa [songs.pl](src/songs.pl) e adicione-o no seu Codespace de Prolog:
+
+``` bash
+wget https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2025b/main/classes/14/src/songs.pl
+```
 
 Este código em Prolog declara os seguintes predicados:
 
@@ -206,16 +209,87 @@ Este código em Prolog declara os seguintes predicados:
 - `duration/3`: fatos na forma `duration(SongName, Minutes, Seconds)`
 - `artist/2`: fatos na forma `artist(SongName, ArtistName)`
 
+``` prolog
+:- dynamic 
+     song/2,
+     duration/3,
+     artist/2.
+:- discontiguous
+     song/2,
+     duration/3,
+     artist/2.
+
+
+song(thats_my_way,2013).
+duration(thats_my_way,5,39).
+artist(thats_my_way,edi_rock).
+
+song(sweater_weather,2013).
+duration(sweater_weather,4,0).
+artist(sweater_weather,the_neighbourhood).
+
+song(feel_the_pop,2024).
+duration(feel_the_pop,2,56).
+artist(feel_the_pop,zerobaseone).
+
+song(the_emptiness_machine,2024).
+duration(the_emptiness_machine,3,10).
+artist(the_emptiness_machine,linkin_park).
+
+song(miss_you,2022).
+duration(miss_you,3,26).
+artist(miss_you,oliver_tree).
+
+
+song(apenas_um_rapaz_latino_americano,1976).
+duration(apenas_um_rapaz_latino_americano,4,18).
+artist(apenas_um_rapaz_latino_americano,belchior).
+
+song(poesia_acustica_7_ceu_azul,2019).
+duration(poesia_acustica_7_ceu_azul,9,32).
+artist(poesia_acustica_7_ceu_azul,mc_hariel).
+
+song(while_your_lips_are_still_red,2008).
+duration(while_your_lips_are_still_red,4,18).
+artist(while_your_lips_are_still_red,nightwish).
+
+
+song(tempo_ruim,2006).
+duration(tempo_ruim,2,42).
+artist(tempo_ruim,matanza).
+
+
+song(feeling_whitney,2016).
+duration(feeling_whitney,4,17).
+artist(feeling_whitney,post_malone).
+
+song(just,1995).
+duration(just,3,54).
+artist(just,radiohead).
+
+song(i_need_u,2015).
+duration(i_need_u,3,30).
+artist(i_need_u,bts).
+
+
+song(i_kissed_a_girl,2008).
+duration(i_kissed_a_girl,2,59).
+artist(i_kissed_a_girl,katy_perry).
+
+song(die_with_a_smile,2024).
+duration(die_with_a_smile,4,11).
+artist(die_with_a_smile,lady_gaga).
+```
 
 ### Modifique `songs.pl`
 
 No final do arquivo `songs.pl`:
 
-1. Defina o predicado `duration_in_secs(SongName, Secs)`, de forma que `Sesc` seja a duração da música `SongName` em segundos. Lembre de usar `is` para aritmética em Prolog.
+1. Defina o predicado `duration_in_secs(SongName, Secs)`, de forma que `Secs` seja a duração da música `SongName` em segundos. Lembre de usar `is` para aritmética em Prolog.
 
 2. Adicione o seguinte predicado para testar seu código:
 
-   ```prolog
+   ``` prolog
    playlist_duration(Time) :-
      findall(S, duration_in_secs(_, S), L), sum_list(L, Time). 
    ```
@@ -231,7 +305,7 @@ No final do arquivo `songs.pl`:
 
 3. Adicione o predicado recursivo `filterShorts(L1, L2)`, em que `L1` é uma lista de números `L1` e  `L2` é uma lista contendo somente os números menores que `200` de `L1`.
 
-   ```prolog
+   ``` prolog
    filterShorts([],[]).
    filterShorts(L1,L2) :-
      L1 = [H|T],
