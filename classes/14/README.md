@@ -19,7 +19,284 @@ link:     https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css
 
 script:   https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js
 
+@onload
+window.CodeRunner = {
+    ws: undefined,
+    handler: {},
+    connected: false,
+    error: "",
+    url: "",
+    firstConnection: true,
 
+    init(url, step = 0) {
+        this.url = url
+        if (step  >= 10) {
+           console.warn("could not establish connection")
+           this.error = "could not establish connection to => " + url
+           return
+        }
+
+        this.ws = new WebSocket(url);
+
+        const self = this
+        
+        const connectionTimeout = setTimeout(() => {
+          self.ws.close();
+          console.log("WebSocket connection timed out");
+        }, 5000);
+        
+        
+        this.ws.onopen = function () {
+            clearTimeout(connectionTimeout);
+            self.log("connections established");
+
+            self.connected = true
+            
+            setInterval(function() {
+                self.ws.send("ping")
+            }, 15000);
+        }
+        this.ws.onmessage = function (e) {
+            // e.data contains received string.
+
+            let data
+            try {
+                data = JSON.parse(e.data)
+            } catch (e) {
+                self.warn("received message could not be handled =>", e.data)
+            }
+            if (data) {
+                self.handler[data.uid](data)
+            }
+        }
+        this.ws.onclose = function () {
+            clearTimeout(connectionTimeout);
+            self.connected = false
+            self.warn("connection closed ... reconnecting")
+
+            setTimeout(function(){
+                console.warn("....", step+1)
+                self.init(url, step+1)
+            }, 1000)
+        }
+        this.ws.onerror = function (e) {
+            clearTimeout(connectionTimeout);
+            self.warn("an error has occurred")
+        }
+    },
+    log(...args) {
+        window.console.log("CodeRunner:", ...args)
+    },
+    warn(...args) {
+        window.console.warn("CodeRunner:", ...args)
+    },
+    handle(uid, callback) {
+        this.handler[uid] = callback
+    },
+    send(uid, message, sender=null, restart=false) {
+        const self = this
+        if (this.connected) {
+          message.uid = uid
+          this.ws.send(JSON.stringify(message))
+        } else if (this.error) {
+
+          if(restart) {
+            sender.lia("LIA: terminal")
+            this.error = ""
+            this.init(this.url)
+            setTimeout(function() {
+              self.send(uid, message, sender, false)
+            }, 2000)
+
+          } else {
+            //sender.lia("LIA: wait")
+            setTimeout(() => {
+              sender.lia(" " + this.error)
+              sender.lia(" Maybe reloading fixes the problem ...")
+              sender.lia("LIA: stop")
+            }, 800)
+          }
+        } else {
+          setTimeout(function() {
+            self.send(uid, message, sender, false)
+          }, 2000)
+          
+          if (sender) {
+            
+            sender.lia("LIA: terminal")
+            if (this.firstConnection) {
+              this.firstConnection = false
+              setTimeout(() => { 
+                sender.log("stream", "", [" Waking up execution server ...\n", "This may take up to 30 seconds ...\n", "Please be patient ...\n"])
+              }, 100)
+            } else {
+              sender.log("stream", "", ".")
+            }
+            sender.lia("LIA: terminal")
+          }
+        }
+    }
+}
+
+//window.CodeRunner.init("wss://coderunner.informatik.tu-freiberg.de/")
+//window.CodeRunner.init("ws://localhost:4000/")
+window.CodeRunner.init("wss://ancient-hollows-41316.herokuapp.com/")
+@end
+
+@LIA.c:                 @LIA.eval(`["main.c"]`, `gcc -Wall main.c -o a.out`, `./a.out`)
+@LIA.prolog:            @LIA.eval(`["main.pl"]`, `none`, `swipl -s main.pl -g @0 -t halt`)
+@LIA.prolog_withShell:  @LIA.eval(`["main.pl"]`, `none`, `swipl -s main.pl`)
+
+
+@LIA.eval:  @LIA.eval_(false,`@0`,@1,@2,@3)
+
+@LIA.evalWithDebug: @LIA.eval_(true,`@0`,@1,@2,@3)
+
+@LIA.eval_
+<script>
+function random(len=16) {
+    let chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let str = '';
+    for (let i = 0; i < len; i++) {
+        str += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    return str;
+}
+
+
+
+const uid = random()
+var order = @1
+var files = []
+
+var pattern = "@4".trim()
+
+if (pattern.startsWith("\`")){
+  pattern = pattern.slice(1,-1)
+} else if (pattern.length === 2 && pattern[0] === "@") {
+  pattern = null
+}
+
+if (order[0])
+  files.push([order[0], `@'input(0)`])
+if (order[1])
+  files.push([order[1], `@'input(1)`])
+if (order[2])
+  files.push([order[2], `@'input(2)`])
+if (order[3])
+  files.push([order[3], `@'input(3)`])
+if (order[4])
+  files.push([order[4], `@'input(4)`])
+if (order[5])
+  files.push([order[5], `@'input(5)`])
+if (order[6])
+  files.push([order[6], `@'input(6)`])
+if (order[7])
+  files.push([order[7], `@'input(7)`])
+if (order[8])
+  files.push([order[8], `@'input(8)`])
+if (order[9])
+  files.push([order[9], `@'input(9)`])
+
+
+send.handle("input", (e) => {
+    CodeRunner.send(uid, {stdin: e}, send)
+})
+send.handle("stop",  (e) => {
+    CodeRunner.send(uid, {stop: true}, send)
+});
+
+
+CodeRunner.handle(uid, function (msg) {
+    switch (msg.service) {
+        case 'data': {
+            if (msg.ok) {
+                CodeRunner.send(uid, {compile: @2}, send)
+            }
+            else {
+                send.lia("LIA: stop")
+            }
+            break;
+        }
+        case 'compile': {
+            if (msg.ok) {
+                if (msg.message) {
+                    if (msg.problems.length)
+                        console.warn(msg.message);
+                    else
+                        console.log(msg.message);
+                }
+
+                send.lia("LIA: terminal")
+                CodeRunner.send(uid, {exec: @3, filter: pattern})
+
+                if(!@0) {
+                  console.clear()
+                }
+            } else {
+                send.lia(msg.message, msg.problems, false)
+                send.lia("LIA: stop")
+            }
+            break;
+        }
+        case 'stdout': {
+            if (msg.ok)
+                console.stream(msg.data)
+            else
+                console.error(msg.data);
+            break;
+        }
+
+        case 'stop': {
+            if (msg.error) {
+                console.error(msg.error);
+            }
+
+            if (msg.images) {
+                for(let i = 0; i < msg.images.length; i++) {
+                    console.html("<hr/>", msg.images[i].file)
+                    console.html("<img title='" + msg.images[i].file + "' src='" + msg.images[i].data + "' onclick='window.LIA.img.click(\"" + msg.images[i].data + "\")'>")
+                }
+            }
+
+            if (msg.videos) {
+                for(let i = 0; i < msg.videos.length; i++) {
+                    console.html("<hr/>", msg.videos[i].file)
+                    console.html("<video controls style='width:100%' title='" + msg.videos[i].file + "' src='" + msg.videos[i].data + "'></video>")
+                }
+            }
+
+            if (msg.files) {
+                let str = "<hr/>"
+                for(let i = 0; i < msg.files.length; i++) {
+                    str += `<a href='data:application/octet-stream${msg.files[i].data}' download="${msg.files[i].file}">${msg.files[i].file}</a> `
+                }
+
+                console.html(str)
+            }
+
+            window.console.warn(msg)
+
+            send.lia("LIA: stop")
+            break;
+        }
+
+        default:
+            console.log(msg)
+            break;
+    }
+})
+
+
+CodeRunner.send(
+    uid, { "data": files }, send, true
+);
+
+"LIA: wait"
+</script>
+@end
+
+-->
 
 <!--
 nvm use v14.21.1
@@ -50,8 +327,7 @@ liascript-devserver --input README.md --port 3001 --live
 
 A parte "Escreva suas consultas" na prática da aula passada tinha **7 questões**. A seguir temos um quiz sobre 3 delas.
 
-                 {{1}}
-************************************************
+#### 1. Filmes e anos
 
 Qual das alternativas abaixo responde a pergunta: "Quais os filmes lançados na década de 80 (entre 1981 e 1990, inclusive)?"
 
@@ -76,14 +352,13 @@ false.
 ***********************
 
 
-************************************************
 
 
 
 
 
-                 {{2}}
-************************************************
+
+#### 2. Atores ou atrizes
 
 Qual das alternativas abaixo responde corretamente à pergunta: "Quais os atores ou atrizes do filme `the_hunger_games`"?
 
@@ -109,12 +384,13 @@ Actress = jennifer_lawrence.
 
 ***********************
 
-************************************************
 
 
 
-                 {{3}}
-************************************************
+
+#### 3. Ano de lançamento
+      
+
 
 A consulta abaixo responde à pergunta: "Há quantos anos foi lançado o filme `big_fish`"?
 
@@ -138,15 +414,13 @@ Idade = 21.
 
 ***********************
 
-************************************************
 
 ### Segunda parte: regras
 
 A parte "Adicione regras em movies.pl" da prática tinha 3 questões. A seguir temos um quiz sobre 2 delas.
 
 
-                 {{1}}
-************************************************
+#### 4. `drama_artist`
 
 Qual das opções abaixo **não** define corretamente o predicado `drama_artist(A)`, que será verdadeiro se `A` for ator ou atriz em um filme de drama. 
 
@@ -159,13 +433,12 @@ Este predicado precisa de um "ou" (`;`) entre os predicados `actor` e `actress`.
 
 ***********************
 
-************************************************
 
 
 
+#### 5. `recommend`
 
-                 {{2}}
-************************************************
+
 
 Complete abaixo o predicado `recommend(U,M)`, para recomendar um filme de nome `M` a um usuário `U`. 
 
@@ -187,7 +460,6 @@ Este predicado:
 ***********************
 
 
-************************************************
 
 
 
@@ -197,17 +469,20 @@ Este predicado:
 
 ## Prática: `songs.pl`
 
-Baixe o programa [songs.pl](src/songs.pl) e adicione-o no seu Codespace de Prolog:
 
-``` bash
-wget https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2025b/main/classes/14/src/songs.pl
-```
+Nos exercícios seguintes, você vai trabalhar com oo arquivo `songs.pl`.
 
-Este código em Prolog declara os seguintes predicados:
+- Baixe o programa [songs.pl](src/songs.pl) e adicione-o no seu Codespace de Prolog:
 
-- `song/2`: fatos na forma `song(SongName, Year)`
-- `duration/3`: fatos na forma `duration(SongName, Minutes, Seconds)`
-- `artist/2`: fatos na forma `artist(SongName, ArtistName)`
+  ``` bash
+  wget https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2025b/main/classes/14/src/songs.pl
+  ```
+
+- Note que este código em Prolog declara os seguintes predicados:
+
+  - `song/2`: fatos na forma `song(SongName, Year)`
+  - `duration/3`: fatos na forma `duration(SongName, Minutes, Seconds)`
+  - `artist/2`: fatos na forma `artist(SongName, ArtistName)`
 
 ``` prolog
 :- dynamic 
@@ -280,44 +555,49 @@ song(die_with_a_smile,2024).
 duration(die_with_a_smile,4,11).
 artist(die_with_a_smile,lady_gaga).
 ```
+@LIA.prolog_withShell
 
-### Modifique `songs.pl`
+
+
+
+### 1. Duração da música
 
 No final do arquivo `songs.pl`:
 
-1. Defina o predicado `duration_in_secs(SongName, Secs)`, de forma que `Secs` seja a duração da música `SongName` em segundos. Lembre de usar `is` para aritmética em Prolog.
+- Defina o predicado `duration_in_secs(SongName, Secs)`, de forma que `Secs` seja a duração da música `SongName` em segundos. Lembre de usar `is` para aritmética em Prolog.
 
-2. Adicione o seguinte predicado para testar seu código:
+- Adicione o seguinte predicado para testar seu código:
 
-   ``` prolog
-   playlist_duration(Time) :-
-     findall(S, duration_in_secs(_, S), L), sum_list(L, Time). 
-   ```
+  ``` prolog
+  playlist_duration(Time) :-
+    findall(S, duration_in_secs(_, S), L), sum_list(L, Time). 
+  ```
 
-   Se tudo estiver certo, você deverá poder executar a seguinte consulta:
+  Se tudo estiver certo, você poderá executar a seguinte consulta:
 
-   ```
-   ?- playlist_duration(T).
-   T = 3532.
-   ```
+  ```
+  ?- playlist_duration(T).
+  T = 3532.
+  ```
 
 
+### 2. Filter (recursão)
 
-3. Adicione o predicado recursivo `filterShorts(L1, L2)`, em que `L1` é uma lista de números `L1` e  `L2` é uma lista contendo somente os números menores que `200` de `L1`.
+- Adicione o predicado recursivo `filterShorts(L1, L2)`, em que `L1` é uma lista de números `L1` e  `L2` é uma lista contendo somente os números menores que `200` de `L1`.
 
-   ``` prolog
-   filterShorts([],[]).
-   filterShorts(L1,L2) :-
-     L1 = [H|T],
-     H < 200,
-     filterShorts(T, Aux),
-     L2 = [H|Aux].
+  ``` prolog
+  filterShorts([],[]).
+  filterShorts(L1,L2) :-
+    L1 = [H|T],
+    H < 200,
+    filterShorts(T, Aux),
+    L2 = [H|Aux].
     
-   filterShorts(L1,L2) :-
-     L1 = [H|T],
-     H >= 200,
-     filterShorts(T, L2).
-   ```
+  filterShorts(L1,L2) :-
+    L1 = [H|T],
+    H >= 200,
+    filterShorts(T, L2).
+  ```
 
    Explicação:
 
@@ -326,26 +606,28 @@ No final do arquivo `songs.pl`:
    - A notação `[H|T]` unifica com uma lista não-vazia, sendo `H` o primeiro elemento (head) da lista e `T` o restante (tail). Podemos usar esta notação para "decompor" uma lista em head e tail.
    - As duas regras expressam condições alternativas que podem ocorrer. Essas regras poderiam ser combinadas em uma única regra com um `;` (ou), mas ficaria menos legível.
 
-4. Adicione o seguinte predicado para testar seu código:
+- Adicione o seguinte predicado para testar seu código:
 
-   ```prolog
-   playlist_shorts(L) :- 
-     findall(S, duration_in_secs(_, S), A), filterShorts(A, L).
-   ```
+  ```prolog
+  playlist_shorts(L) :- 
+    findall(S, duration_in_secs(_, S), A), filterShorts(A, L).
+  ```
 
-   Se tudo foi adicionado corretamente, você deverá poder executar a seguinte consulta:
+  Se tudo foi adicionado corretamente, você deverá poder executar a seguinte consulta:
 
-   ```
-   ?- playlist_shorts(L).
-   L = [176, 190, 162, 179]
-   ```
-
-
-
-5. Escreva uma consulta para obter os nomes das músicas cuja duração seja menor que 200 segundos.
+  ```
+  ?- playlist_shorts(L).
+  L = [176, 190, 162, 179]
+  ```
 
 
-6. Adicione um predicado `short(Song)` que seja verdadeiro se `Song` for uma música com duração menor que 200 segundos.
+### 3. Músicas curtas (consulta)
+
+- Escreva uma consulta para obter os nomes das músicas cuja duração seja menor que 200 segundos.
+
+### 4. Músicas curtas (regra)
+
+- Adicione um predicado `short(Song)` que seja verdadeiro se `Song` for uma música com duração menor que 200 segundos.
 
 
 
