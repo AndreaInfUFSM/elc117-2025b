@@ -174,7 +174,7 @@
 <td>Qui</td>
 <td><ul>
 <li><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2025b/main/classes/14/README.md">Programação lógica com Prolog</a>: exercícios com consultas, regras e listas</li>
-<li>Apresentação de exercícios (Prolog): <a href="https://github.com/elc117/apresentacao-bim1-2025b-cacoreco">Cauã</a>, <a href="https://github.com/elc117/apresentacao-bim1-2025b-Juranqt">Juran</a> e <a href="https://github.com/elc117/apresentacao-bim1-2025b-gustavogfreitas">Gustavo</a>
+<li>Apresentação de exercícios (Prolog): <a href="https://github.com/elc117/apresentacao-bim1-2025b-cacoreco">Cauã</a>, <a href="https://github.com/elc117/apresentacao-bim1-2025b-Juranqt">Juran</a> e Gustavo
 </ul></td>
 </tr>
 
@@ -183,7 +183,8 @@
 <td>23/09/2025</td>
 <td>Ter</td>
 <td><ul>
-<li>Programação lógica (lab).</li>
+<li><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2025b/main/classes/15/README.md">Programação lógica com Prolog</a>: exercícios e mais exemplos com listas</li>
+<li>Apresentação de exercícios (Prolog): <a href="https://github.com/elc117/apresentacao-bim1-2025b-gustavogfreitas">Gustavo</a>
 </ul></td>
 </tr>
 
@@ -192,7 +193,7 @@
 <td>25/09/2025</td>
 <td>Qui</td>
 <td><ul>
-<li>Avaliação.</li>
+<li>Avaliação: prova de leitura/compreensão de código.</li>
 </ul></td>
 </tr>
 
