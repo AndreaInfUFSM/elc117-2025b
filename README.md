@@ -202,7 +202,7 @@
 <td>30/09/2025</td>
 <td>Ter</td>
 <td><ul>
-<li>Discussão dos resultados das avaliações.</li>
+<li>Discussão dos <a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2025b/main/classes/17/README.md">resultados das avaliações</a>.</li>
 </ul></td>
 </tr>
 
