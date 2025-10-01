@@ -211,7 +211,8 @@
 <td>02/10/2025</td>
 <td>Qui</td>
 <td><ul>
-<li>Programação orientada a objetos.</li>
+<li><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2025b/main/classes/18/README.md">Programação orientada a objetos</a>: introdução usando Java</li>
+
 </ul></td>
 </tr>
 
