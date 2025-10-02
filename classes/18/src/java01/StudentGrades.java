@@ -32,9 +32,9 @@ public class StudentGrades {
         String csvFile = "students.csv";  // Path to the CSV file in the SAME FOLDER as the program
         List<Student> students = new ArrayList<>();
 
-        // Read CSV file and populate the student list
+        // Read CSV file and populate the student list        
         try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
-            String line;
+            String line = br.readLine(); // Skip the first line
             while ((line = br.readLine()) != null) {
                 String[] values = line.split(",");
                 if (values.length == 3) {
@@ -71,8 +71,8 @@ public class StudentGrades {
         // // In Haskell, this would be: 
         // // students = [("Alice",1001,8.55),("Bob", 1002,7.8),("Charlie", 1003,9.2)]
         // // meanGrade 
-        // //   | length students > 0 = sum [grade | (_, _, grade) <- students] / fromIntegral (length students) 
-        // //   | otherwise = 0.0
+        // //   | null students = 0.0
+        // //   | otherwise     = sum (map (\(_,_,g) -> g) students) / fromIntegral (length students)
         // double meanGrade = students.stream()
         //         .mapToDouble(Student::getGrade)  // Extract grades as a DoubleStream
         //         .average()                       // Calculate average

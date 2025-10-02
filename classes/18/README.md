@@ -328,6 +328,8 @@ liascript-devserver --input README.md --port 3001 --live
 
 ## Procedural X OO
 
+Vídeo: https://www.bbc.co.uk/bitesize/guides/zc8pjty/video
+
 Contraste entre programação procedural e programação orientada a objetos:
 
 | Procedural      | Orientado a objetos  |
