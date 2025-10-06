@@ -221,7 +221,8 @@
 <td>07/10/2025</td>
 <td>Ter</td>
 <td><ul>
-<li>Programação orientada a objetos (lab).</li>
+<li><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2025b/main/classes/19/README.md">Programação orientada a objetos em Java</a>: encapsulamento, classe, objeto, construtores, referências para objetos, modificadores de acesso</li>
+
 </ul></td>
 </tr>
 
