@@ -163,7 +163,7 @@
 <td>Ter</td>
 <td><ul>
 <li><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2025b/main/classes/13/README.md">Programação lógica com Prolog</a>: unificação, listas, puzzles, prática com base de filmes</li>
-<li>Apresentação de exercícios (Prolog): <a href="https://github.com/elc117/apresentacao-bim1-2025b-Adrian351lang">Adrian</a>, <a href="https://github.com/elc117/apresentacao-bim1-2025b-Bbock2511">Bruno B.</a> e <a href="https://github.com/elc117/apresentacao-bim1-2025b-RPFacco">Ricardo</a>
+<li>Apresentação de exercícios (Prolog): <a href="https://github.com/elc117/apresentacao-bim1-2025b-Adrian351lang">Adrian</a>, <a href="https://github.com/elc117/apresentacao-bim1-2025b-Bbock2511">Bruno B.</a> e <a href="https://github.com/elc117/apresentacao-bim1-2025b-RPFacco">Ricardo</a></li>
 <li><a href="https://github.com/elc117/demo-prolog-dfs-2025b">Visualização da execução:</a> mecanismo de busca em profundidade</li>
 </ul></td>
 </tr>
@@ -174,7 +174,7 @@
 <td>Qui</td>
 <td><ul>
 <li><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2025b/main/classes/14/README.md">Programação lógica com Prolog</a>: exercícios com consultas, regras e listas</li>
-<li>Apresentação de exercícios (Prolog): <a href="https://github.com/elc117/apresentacao-bim1-2025b-cacoreco">Cauã</a>, <a href="https://github.com/elc117/apresentacao-bim1-2025b-Juranqt">Juran</a> e Gustavo
+<li>Apresentação de exercícios (Prolog): <a href="https://github.com/elc117/apresentacao-bim1-2025b-cacoreco">Cauã</a>, <a href="https://github.com/elc117/apresentacao-bim1-2025b-Juranqt">Juran</a> e Gustavo</li>
 </ul></td>
 </tr>
 
@@ -184,7 +184,7 @@
 <td>Ter</td>
 <td><ul>
 <li><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2025b/main/classes/15/README.md">Programação lógica com Prolog</a>: exercícios e mais exemplos com listas</li>
-<li>Apresentação de exercícios (Prolog): <a href="https://github.com/elc117/apresentacao-bim1-2025b-gustavogfreitas">Gustavo</a>
+<li>Apresentação de exercícios (Prolog): <a href="https://github.com/elc117/apresentacao-bim1-2025b-gustavogfreitas">Gustavo</a></li>
 </ul></td>
 </tr>
 
@@ -222,7 +222,7 @@
 <td>Ter</td>
 <td><ul>
 <li><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2025b/main/classes/19/README.md">Programação orientada a objetos em Java</a>: encapsulamento, classe, objeto, construtores, referências para objetos, modificadores de acesso</li>
-
+<li>Apresentação de exercícios: <a href="https://github.com/elc117/apresentacao-bim2-2025b-Bbock2511">Bruno</a>, <a href="https://github.com/elc117/apresentacao-bim2-2025b-SamSteffler">Samuel</a> e <a href="https://github.com/elc117/apresentacao-bim2-2025b-TiagoSteffler">Tiago</a></li>
 </ul></td>
 </tr>
 
@@ -231,7 +231,9 @@
 <td>09/10/2025</td>
 <td>Qui</td>
 <td><ul>
-<li>Programação orientada a objetos.</li>
+<li><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2025b/main/classes/20/README.md">Exercícios de programação orientada a objetos em Java</a>: encapsulamento, classe, objeto, construtores, referências para objetos, modificadores de acesso</li>
+<li>Apresentação de exercícios: <a href="https://github.com/elc117/apresentacao-bim2-2025b-GabrielSaueressig">Gabriel</a> e <a href="https://github.com/elc117/apresentacao-bim2-2025b-HLKellermann">Helena</a></li>
+
 </ul></td>
 </tr>
 
