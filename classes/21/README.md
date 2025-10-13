@@ -440,70 +440,15 @@ classDiagram
 Nesta parte, é fornecido um código incompleto, que refatora o código anterior, corrigindo alguns problemas e aplicando melhor os recursos de programação orientada a objetos.
 
 
-### Organização do código
-
-```
-.
-├── conquistas.csv
-├── io
-│   └── CsvReader.java
-├── Main.java
-├── model
-│   └── Achievement.java
-├── service
-│   └── CardGenerator.java
-└── template
-    └── SvgTemplate.java
-```
 
 
 ### Diagrama de classes
 
-O código em [CardGenerator.java](src/v2/CardGenerator.java) corresponde ao diagrama UML abaixo:
+O código em [v2](src/v2/) corresponde ao diagrama UML abaixo:
+
 
 
 ```mermaid @mermaid
-classDiagram
-  class SvgTemplate {
-
-    - bgColor1 : String
-    - bgColor2 : String
-    - accent1 : String
-    - accent2 : String
-    - SvgTemplate(String bg1, String bg2, String accent1, String accent2)
-    + fromChoice(String choice) : SvgTemplate$ 
-    + render(String title1, String title2, String name, String reason) : String
-  }
-  class Main {
-
-    + main(String[] args) : void$ 
-  }
-  class CardGenerator {
-
-    - template : SvgTemplate
-    + CardGenerator(SvgTemplate template)
-    + generateCard(Achievement a) : String
-    + saveCard(Path outputDir, String studentName, String svgContent) : void
-  }
-  class CsvReader {
-
-    + read(Path csvPath) : List<Achievement>
-  }
-  class Achievement {
-
-    - name : String
-    - title : String
-    - reason : String
-    + Achievement(String name, String title, String reason)
-    + getName() : String
-    + getTitle() : String
-    + getReason() : String
-  }
-CardGenerator --> SvgTemplate
-```
-
-
-```
 classDiagram
 
   class SvgTemplate {
@@ -550,6 +495,60 @@ CardGenerator ..> SvgTemplate : depends on
 CardGenerator ..> Achievement : uses
 ```
 
+
+### Organização do código
+
+```
+.
+├── conquistas.csv
+├── io
+│   └── CsvReader.java
+├── Main.java
+├── model
+│   └── Achievement.java
+├── service
+│   └── CardGenerator.java
+└── template
+    └── SvgTemplate.java
+```
+
+### Complete o código
+
+1. Complete a classe `Achievement` no arquivo [model/Achievement.java](src/v2/model/Achievement.java)
+
+2. Complete o código em `Main` no arquivo [Main.java](src/v2/Main.java)
+
+
+
+### Compile e execute
+
+
+- Compile e execute o código na pasta `v2` (depois de percorrer as pastas com `cd` até chegar na pasta desejada):
+
+
+  ```
+  cd v2
+  javac -d build Main.java
+  java -cp build Main
+  ```
+
+- Entenda os comandos:
+
+  - `javac Main.java`: chama o compilador Java, que vai traduzir o Main.java para um ou mais arquivos .class (de acordo com as classes contidas no arquivo). Também vai compilar outros .java que estejam em subpastas e sejam importados pelo Main.java
+  - `javac -d build Main.java`: define o diretório/pasta de destino da compilação como sendo `build` (pode ser qualquer nome, a pasta será criada se não existir). Essa pasta conterá todos os .class gerados
+  - `java Main`: executa o método `main` da classe `Main` que está na pasta corrente (a classe pode ter qualquer nome)
+  - `java -cp build Main`: `-cp` ajusta o classpath para a pasta `build` e executa o método `main` da classe `Main`, que está dentro da pasta `build`. O `classpath` define os locais onde a JVM pode procurar classes
+
+  
+
+- Altere o arquivo `conquistas.csv` e gere novos cards.
+
+- Gere cards com outros templates, passando argumentos na linha de comando:
+
+  ```   
+  java CardGenerator azul
+  java CardGenerator vermelho
+  ```
 
 ## Bibliografia
 
