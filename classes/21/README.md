@@ -352,9 +352,14 @@ liascript-devserver --input README.md --port 3001 --live
 Avance para preparar seu ambiente e ver o enunciado dos exercícios.
 
 
+## Repositório
+
+Caso ainda não tenha criado um repositório para as práticas de Java, clique aqui: https://classroom.github.com/a/y_Kxvssa
+
+
 ## Obtenha o código desta prática
 
-Os arquivos desta prática estão no repositório da disciplina. Você pode obtê-los de mais de uma forma:
+Os arquivos desta prática estão no repositório da disciplina. Você pode obtê-los de diferentes formas:
 
 - Opção 1 (preferível): Clonar o repositório da disciplina (localmente ou no Codespace), com o seguinte comando no terminal:
 
@@ -423,13 +428,13 @@ classDiagram
 ### Analise as más práticas
 
 
-- O código em [CardGenerator.java](src/v1/CardGenerator.java) não é bem orientado a objetos e também não segue boas práticas válidas para qualquer paradigma/linguagem de programação. Ainda assim, funciona e contém partes úteis que podem ser reaproveitadas.
+- O código em [CardGenerator.java](src/v1/CardGenerator.java) não é bem orientado a objetos e também não segue boas práticas válidas para qualquer paradigma/linguagem de programação. Ainda assim, funciona e contém partes úteis que podem ser reaproveitadas/refatoradas.
 
 - Identifique as más práticas analisando o código e os comentários.
 
+- Saiba mais sobre "God class" ou "God object": [God object na Wikipedia](https://en.wikipedia.org/wiki/God_object), [Clean Code #03 God Object Antipattern - how to fix it?](https://www.youtube.com/watch?v=11vTR7L8zi4)
 
-
-
+  ![](img/godclass_x_godzilla.png)
 
 
 
@@ -437,7 +442,7 @@ classDiagram
 
 > Esta parte deve ser realizada na pasta `v2`.
 
-Nesta parte, é fornecido um código incompleto, que refatora o código anterior, corrigindo alguns problemas e aplicando melhor os recursos de programação orientada a objetos.
+Nesta parte, é fornecido um código incompleto, que refatora parte do código anterior, corrigindo alguns problemas e aplicando melhor os recursos de programação orientada a objetos.
 
 
 
@@ -516,7 +521,9 @@ CardGenerator ..> Achievement : uses
 
 1. Complete a classe `Achievement` no arquivo [model/Achievement.java](src/v2/model/Achievement.java)
 
-2. Complete o código em `Main` no arquivo [Main.java](src/v2/Main.java)
+2. Complete o código em `Main` no arquivo [Main.java](src/v2/Main.java), para gerar e salvar cada card, usando métodos definidos em CardGenerator.java
+
+
 
 
 
@@ -540,15 +547,23 @@ CardGenerator ..> Achievement : uses
   - `java -cp build Main`: `-cp` ajusta o classpath para a pasta `build` e executa o método `main` da classe `Main`, que está dentro da pasta `build`. O `classpath` define os locais onde a JVM pode procurar classes
 
   
+- Se o novo programa foi completado corretamente, a execução vai gerar cards nos modelos verde/default ou azul, equivalentes aos da versão anterior.
 
-- Altere o arquivo `conquistas.csv` e gere novos cards.
+### Continue
 
-- Gere cards com outros templates, passando argumentos na linha de comando:
+Implemente outras funcionalidades no programa fornecido. Algumas ideias:
 
-  ```   
-  java CardGenerator azul
-  java CardGenerator vermelho
-  ```
+- Crie outros templates configuráveis: (a) com outra estrutura no código SVG e/ou (b) variando cores, posições, ícones. 
+
+  - Na pasta [assets](https://github.com/AndreaInfUFSM/elc117-2025b/tree/main/classes/21/src/assets) estão outros ícones que podem ser incorporados aos cards. Fonte: https://lucide.dev/icons/
+
+- Crie uma lógica de geração dos cards que permita gerar cards diferentes para cada linha de conquistas.csv
+
+- Para permitir mais flexibilidade na configuração de templates, crie uma ou mais classes para lidar com esquemas de cores. Um esquema/paleta de cor pode ter combinações de cores escolhidas manualmente ou geradas automaticamente a partir de regras para cores análogas, complementares, triádicas. Ver: https://pt.wikipedia.org/wiki/C%C3%ADrculo_crom%C3%A1tico
+
+  ![](https://upload.wikimedia.org/wikipedia/commons/9/99/Combinacao_harmonica_das_cores.jpg)
+
+- Crie uma lógica para gerar o conteúdo do arquivo conquistas.csv
 
 ## Bibliografia
 

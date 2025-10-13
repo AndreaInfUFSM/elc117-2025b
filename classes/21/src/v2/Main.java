@@ -18,7 +18,9 @@ public class Main {
             CardGenerator generator = new CardGenerator(template);
 
             for (Achievement a : conquistas) {
-                // Complete-me
+                // Complete-me:
+                // Gere um card
+                // Salve o card
             }
 
             System.out.println("Cartões gerados em: " + outputDir.toAbsolutePath());
