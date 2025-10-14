@@ -354,7 +354,7 @@ Avance para preparar seu ambiente e ver o enunciado dos exercícios.
 
 ## Repositório
 
-Caso ainda não tenha criado um repositório para as práticas de Java, clique aqui: https://classroom.github.com/a/y_Kxvssa
+Crie um repositório público para esta prática de Java, clicando aqui: https://classroom.github.com/a/x50Dwwks
 
 
 ## Obtenha o código desta prática
