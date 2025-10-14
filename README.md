@@ -242,7 +242,7 @@
 <td>14/10/2025</td>
 <td>Ter</td>
 <td><ul>
-<li><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2025b/main/classes/21/README.md">Prátca de programação orientada a objetos em Java</a>: refatorando um código fornecido</li>
+<li><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2025b/main/classes/21/README.md">Prática de programação orientada a objetos em Java</a>: refatorando um código fornecido</li>
 <li>Apresentação de exercícios: <a href="https://github.com/elc117/apresentacao-bim2-2025b-brucvei">Bruna</a> e <a href="https://github.com/elc117/apresentacao-bim2-2025b-avilxrd">Miguel</a></li>
 </ul></td>
 </tr>

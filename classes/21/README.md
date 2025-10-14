@@ -381,7 +381,7 @@ Você vai trabalhar com os arquivos na pasta `v1`.
 
 ### Diagrama de classe
 
-O código em [CardGenerator.java](src/v1/CardGenerator.java) corresponde ao diagrama UML abaixo:
+O código em [CardGenerator.java](src/v1/CardGenerator.java) ([github]((https://github.com/AndreaInfUFSM/elc117-2025b/blob/main/classes/21/src/v1/CardGenerator.java))) corresponde ao diagrama UML abaixo:
 
 
 ```mermaid @mermaid
@@ -432,7 +432,7 @@ classDiagram
 
 - Identifique as más práticas analisando o código e os comentários.
 
-- Saiba mais sobre "God class" ou "God object": [God object na Wikipedia](https://en.wikipedia.org/wiki/God_object), [Clean Code #03 God Object Antipattern - how to fix it?](https://www.youtube.com/watch?v=11vTR7L8zi4)
+- Nessa linha, saiba mais sobre "God class" ou "God object": (1) [God object na Wikipedia](https://en.wikipedia.org/wiki/God_object), (2) [Clean Code #03 God Object Antipattern - how to fix it?](https://www.youtube.com/watch?v=11vTR7L8zi4)
 
   ![](img/godclass_x_godzilla.png)
 
@@ -555,15 +555,21 @@ Implemente outras funcionalidades no programa fornecido. Algumas ideias:
 
 - Crie outros templates configuráveis: (a) com outra estrutura no código SVG e/ou (b) variando cores, posições, ícones. 
 
-  - Na pasta [assets](https://github.com/AndreaInfUFSM/elc117-2025b/tree/main/classes/21/src/assets) estão outros ícones que podem ser incorporados aos cards. Fonte: https://lucide.dev/icons/
+  - Ícones: na pasta [assets](https://github.com/AndreaInfUFSM/elc117-2025b/tree/main/classes/21/src/assets) estão outros ícones que podem ser incorporados aos cards. Fonte: https://lucide.dev/icons/
 
 - Crie uma lógica de geração dos cards que permita gerar cards diferentes para cada linha de conquistas.csv
 
-- Para permitir mais flexibilidade na configuração de templates, crie uma ou mais classes para lidar com esquemas de cores. Um esquema/paleta de cor pode ter combinações de cores escolhidas manualmente ou geradas automaticamente a partir de regras para cores análogas, complementares, triádicas. Ver: https://pt.wikipedia.org/wiki/C%C3%ADrculo_crom%C3%A1tico
+  - Por exemplo: escolha baseada em algum atributo textual de Achievement; escolha aleatória de alguns atributos, utilizando classe Random
+
+- Para permitir mais flexibilidade na configuração de templates, crie uma ou mais classes para lidar com **esquemas de cores**. 
+
+  - Um esquema/paleta de cor pode ter combinações de cores escolhidas **manualmente** ou geradas **automaticamente** a partir de regras para cores análogas, complementares, triádicas. Ver: https://pt.wikipedia.org/wiki/C%C3%ADrculo_crom%C3%A1tico
 
   ![](https://upload.wikimedia.org/wikipedia/commons/9/99/Combinacao_harmonica_das_cores.jpg)
 
 - Crie uma lógica para gerar o conteúdo do arquivo conquistas.csv
+
+  - Que tal usar a API web de um modelo de IA como `gemini-2.5-flash`? Dica: aproveite o código de exemplo de uma aula passada, que usa a API de um serviço web.
 
 ## Bibliografia
 
