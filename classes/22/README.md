@@ -335,7 +335,7 @@ CodeRunner.send(
 <!--
 nvm use v14.21.1
 liascript-devserver --input README.md --port 3001 --live
-https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2023b/master/classes/19/README.md
+
 -->
 
 
@@ -567,8 +567,59 @@ Para descontrair :-) Java é uma linguagem que suporta o paradigma de programaç
 
 
 
-### Diagrama da aula passada
+### Diagramas de aulas anteriores
 
+
+<h4>Aula passada</h4>
+
+```mermaid @mermaid
+classDiagram
+
+  class SvgTemplate {
+
+    - bgColor1 : String
+    - bgColor2 : String
+    - accent1 : String
+    - accent2 : String
+    - SvgTemplate(String bg1, String bg2, String accent1, String accent2)
+    + fromChoice(String choice) : SvgTemplate$ 
+    + render(String title1, String title2, String name, String reason) : String
+  }
+  class Main {
+
+    + main(String[] args) : void $ 
+  }
+  class CardGenerator {
+
+    - template : SvgTemplate
+    + CardGenerator(SvgTemplate template)
+    + generateCard(Achievement a) : String
+    + saveCard(Path outputDir, String studentName, String svgContent) : void
+  }
+  class CsvReader {
+
+    + read(Path csvPath) : List<Achievement>
+  }
+  class Achievement {
+
+    - name : String
+    - title : String
+    - reason : String
+    + Achievement(String name, String title, String reason)
+    + getName() : String
+    + getTitle() : String
+    + getReason() : String
+  }
+
+Main ..> CsvReader : uses
+Main ..> Achievement : uses
+Main ..> SvgTemplate : uses
+Main ..> CardGenerator : uses
+CardGenerator ..> SvgTemplate : depends on
+CardGenerator ..> Achievement : uses
+```
+
+<h4>Aula retrasada</h4>
 
 ```mermaid @mermaid
 classDiagram
@@ -721,7 +772,10 @@ classDiagram
 ## Herança
 
 - Outro tipo de relação entre classes 
-- Inspirada no "mundo real": pais transmitem aos filhos suas características e comportamento
+- Inspirada no "mundo real": 
+
+  - pais **TRANSMITEM** aos filhos suas características e comportamento!
+
 - Motivação: evitar **redundâncias** - mais produtividade, mais facilidade de manutenção
 - Menos frequente que dependência/associação/agregação em programas "pequenos", mas muito usado em frameworks
 
@@ -836,7 +890,7 @@ class Student extends Person {
 
 ### Em UML
 
-Diagrama de uma solução para a prática da aula passada:
+Diagrama de uma solução para a prática da aula retrasada:
 
 > Agora só temos `ArrayList<Person>` em Group!
 
@@ -1043,7 +1097,7 @@ class Main {
 
 ### Encapsulamento
 
-> Atributos e métodos **privados** da classe-mãe **não podem** ser acessados na classe-filha
+> Atributos e métodos **privados** da classe-mãe **NÃO PODEM** ser acessados na classe-filha
 
 ``` java
 class Student extends Person {
@@ -1121,27 +1175,38 @@ Lembre-se que classes podem se relacionar de diferentes maneiras
 
 - Lembre alguns objetivos da OOP: código organizado, mais fácil de ler e modificar
 - Herança evita redundâncias: código repetitivo com algumas substituições
-- Muitas bibliotecas/frameworks costumam exigir que você crie suas classes derivadas de outras existentes
+- Muitas bibliotecas/frameworks **EXIGEM** que você crie suas classes derivadas de outras existentes
 - Quando estiver criando sua hierarquia de classes, aplique o teste "is-a"
-
 
 Faça o teste:
 
-  - [[x]] class Piano extends Instrumento
-  - [[ ]] class Lista extends Elemento
-  - [[ ]] class Pessoa extends Administrador
-  - [[x]] class Cerveja extends Bebida
-  - [[ ]] class Ferrari extends Motor
-  - [[ ]] class Bebida extends Vinho
-  - [[x]] class Prata extends Metal
-  - [[ ]] class Button extends Window
-  - [[x]] class Felino extends Animal
-  - [[ ]] class Vehicle extends Bus
+- [[x]] class Piano extends Instrumento
+- [[ ]] class Lista extends Elemento
+- [[ ]] class Pessoa extends Administrador
+- [[x]] class Cerveja extends Bebida
+- [[ ]] class Ferrari extends Motor
+- [[ ]] class Bebida extends Vinho
+- [[x]] class Prata extends Metal
+- [[ ]] class Button extends Window
+- [[x]] class Felino extends Animal
+- [[ ]] class Vehicle extends Bus
 
 
 ## Herança no "mundo real"!
 
 Avance para ver alguns links que ilustram herança em códigos do "mundo real" 
+
+### Java: `Object`
+
+- Em Java, todas as classes derivam implicitamente da classe `java.lang.Object`.
+
+- Devido a isso, dada uma referência para qualquer objeto, podemos sempre chamar alguns métodos definidos em `Object` (por exemplo: toString(), equals(), hashCode(), getClass(), wait()/notify(), etc.)
+
+- Em outras linguagens
+
+  - C++ é diferente, não tem hierarquia com uma única superclasse
+  - C# é semelhante, tem classe Object
+  - Python é semelhante, tem classe object
 
 ### Em documentação
 
@@ -1188,18 +1253,19 @@ Syrene
 
 Encontre mais jogos em:
 
-- https://itch.io/jam/games-paradigmas-programacao-ufsm-2020a
-- https://itch.io/jam/games-paradigmas-programacao-ufsm-2021a
+- https://itch.io/jam/games-paradigmas-programacao-ufsm-2024b
 - https://itch.io/jam/games-paradigmas-programacao-ufsm-2022a
-
-
-
+- https://itch.io/jam/games-paradigmas-programacao-ufsm-2021a
+- https://itch.io/jam/games-paradigmas-programacao-ufsm-2020a
 
 
 ## Prática
 
 
+- Parte 1: você vai completar um código fornecido
+- Parte 2: cocê vai criar um código do zero
 
+Avance para ver os detalhes...
 
 ### Parte 1: Herança em Assignments
 
@@ -1236,7 +1302,7 @@ classDiagram
     }
 
     TrackAssignments ..> Assignment : uses
-    GroupAssignment "1" --|> Assignment : inherits
+    GroupAssignment "1" --|> Assignment : is-a
 ```
 
 
@@ -1263,7 +1329,7 @@ classDiagram
    ```
    Veja mais sobre o método `toString`:
 
-   - em português [aqui](http://www.mauda.com.br/?p=1472) (em português) ou 
+   - em português [aqui](http://www.mauda.com.br/?p=1472) ou 
    - em inglês [aqui](https://runestone.academy/ns/books/published/csawesome/Unit9-Inheritance/topic-9-7-Object.html)
 
 4. Na classe `Assignment`, complete o método `status`  para retornar uma String que represente a situação da tarefa:
@@ -1276,7 +1342,7 @@ classDiagram
 
    - Uso de `super` em construtores: https://materialpublic.imd.ufrn.br/curso/disciplina/2/8/8/4
    - Outra forma de usar `super`: https://www.w3schools.com/java/ref_keyword_super.asp
-   - Leia este material acima, pois vai ser útil na questão seguinte!
+   - Consulte **MESMO** este material acima sobre `super`, pois vai ser útil na questão seguinte!
 
 6. Na classe `GroupAssignment`, complete o método `notificationMessage()` para retornar uma mensagem modificada quando a tarefa for em grupo, conforme o exemplo abaixo:
 

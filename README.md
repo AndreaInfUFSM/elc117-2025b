@@ -252,7 +252,8 @@
 <td>16/10/2025</td>
 <td>Qui</td>
 <td><ul>
-<li>Programação orientada a objetos.</li>
+<li><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2025b/main/classes/22/README.md">Programação orientada a objetos em Java</a>: herança</li>
+<li>Apresentação de exercícios: <a href="https://github.com/elc117/apresentacao-bim2-2025b-mateus250402">Mateus</a> e <a href="https://github.com/elc117/apresentacao-bim2-2025b-MichelAltmann">Michel</a></li>
 </ul></td>
 </tr>
 
