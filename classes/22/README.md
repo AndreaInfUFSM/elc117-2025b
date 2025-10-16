@@ -1224,31 +1224,17 @@ O que há em comum?
 
 ### Em games de Paradigmas
 
-Guillotine Clicker
-
-- https://pinhalgrandense.itch.io/guillotineclicker
-- https://github.com/elc117/t4-2022a-flavio_gregori_matheus
-- https://github.com/elc117/t4-2022a-flavio_gregori_matheus/blob/main/core/src/com/mygdx/game/GuillotineClicker.java
-
-Jonas vs Arcana Invaders
-
-- https://guglis.itch.io/jonas-vs-arcana-invaders
-- https://github.com/elc117/Jonas-Vs-Arcana-Invaders
-- https://github.com/elc117/Jonas-Vs-Arcana-Invaders/blob/main/core/src/com/uga/game/JonasVsArcanaInvaders.java
 
 
-UFSM Rock Star
+| Thumb | Game  | Repo | Exemplo com herança |
+| ----- | ----- | ---- | ------------------- |
+| ![](img/ArqueoSaga-280.png) | [Arqueo Saga](https://ifspohr.itch.io/arqueo-saga) | [arqueo-saga](https://github.com/elc117/game-2024b-arqueo-saga) | [QuizScreen.java](https://github.com/elc117/game-2024b-arqueo-saga/blob/master/core/src/main/java/io/github/t2paradigmas/QuizScreen.java)                                          |
+| ![](img/GuillotineClicker-280.png) | [Guillotine Clicker](https://pinhalgrandense.itch.io/guillotineclicker)     | [t4-2022a-flavio_gregori_matheus](https://github.com/elc117/t4-2022a-flavio_gregori_matheus) | [GuillotineClicker.java](https://github.com/elc117/t4-2022a-flavio_gregori_matheus/blob/main/core/src/com/mygdx/game/GuillotineClicker.java)                                                                                                                                               |
+| ![](img/JonasArcanaInvaders-280.png) | [Jonas vs Arcana Invaders](https://guglis.itch.io/jonas-vs-arcana-invaders) | [Jonas-Vs-Arcana-Invaders](https://github.com/elc117/Jonas-Vs-Arcana-Invaders)               | [JonasVsArcanaInvaders.java](https://github.com/elc117/Jonas-Vs-Arcana-Invaders/blob/main/core/src/com/uga/game/JonasVsArcanaInvaders.java)                                                                                                                                                |
+| ![](img/UfsmRockstar-280.png) | [UFSM Rock Star](https://henrique-krever.itch.io/ufsm-rockstar)             | [2021gamet4-nos-temos-o-nata](https://github.com/elc117/2021gamet4-nos-temos-o-nata)         | [UfsmRockstar.java](https://github.com/elc117/2021gamet4-nos-temos-o-nata/blob/main/core/src/com/ufsm/rockstar/UfsmRockstar.java)                                                                                                                                                          |
+| ![](img/Syrene-280.png) | [Syrene](https://alegz.itch.io/syrene)                                      | [game-Alexandre-ChagasBrites](https://github.com/elc117/game-Alexandre-ChagasBrites)         | [BoxCollider.java](https://github.com/elc117/game-Alexandre-ChagasBrites/blob/master/core/src/com/alegz/mermaid/physics/BoxCollider.java), [CircleCollider.java](https://github.com/elc117/game-Alexandre-ChagasBrites/blob/master/core/src/com/alegz/mermaid/physics/CircleCollider.java) |
 
-- https://henrique-krever.itch.io/ufsm-rockstar
-- https://github.com/elc117/2021gamet4-nos-temos-o-nata
-- https://github.com/elc117/2021gamet4-nos-temos-o-nata/blob/main/core/src/com/ufsm/rockstar/UfsmRockstar.java
 
-Syrene
-
-- https://alegz.itch.io/syrene
-- https://github.com/elc117/game-Alexandre-ChagasBrites
-- https://github.com/elc117/game-Alexandre-ChagasBrites/blob/master/core/src/com/alegz/mermaid/physics/BoxCollider.java
-- https://github.com/elc117/game-Alexandre-ChagasBrites/blob/master/core/src/com/alegz/mermaid/physics/CircleCollider.java
 
 
 Encontre mais jogos em:
