@@ -262,7 +262,8 @@
 <td>21/10/2025</td>
 <td>Ter</td>
 <td><ul>
-<li>Programação orientada a objetos (lab).</li>
+<li><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2025b/main/classes/23/README.md">Programação orientada a objetos em Java</a>: polimorfismo</li>
+<li>Apresentação de exercícios: <a href="https://github.com/elc117/apresentacao-bim2-2025b-arturfardin">Artur</a> e <a href="https://github.com/elc117/apresentacao-bim2-2025b-OtavioZimmer">Otávio</a></li>
 </ul></td>
 </tr>
 
