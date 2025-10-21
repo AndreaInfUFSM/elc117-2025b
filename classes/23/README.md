@@ -463,7 +463,7 @@ Execute o código passo-a-passo neste [link](https://pythontutor.com/visualize.h
 
 Palavra-chave `super` deve ser seguida de `(` ou de `.`:
 
-- `super(`: uso apenas no início de construtor da subclasse para invocar construtor da superclasse
+- `super(`: uso apenas no início de construtor da subclasse para invocar construtor da superclasse (JDK 25 flexibilizou isso: https://openjdk.org/jeps/513)
 - `super.`: uso em subclasse para designar atributo/método da superclasse
 
 
