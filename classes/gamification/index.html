@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Gamificação — Grafo radial colapsável</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root{
+    --bg:#0b1020; --text:#e6eefc; --muted:#a9b7d0;
+    --node:#19305a; --node-active:#24407a; --area:#60a5fa; --link:#334155;
+  }
+  html,body{height:100%}
+  body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 system-ui,Segoe UI,Roboto,Arial}
+  header{padding:10px 14px;border-bottom:1px solid #111a36;background:#0d1430;display:flex;align-items:center;justify-content:space-between;gap:10px}
+  h1{margin:0;font-size:16px}
+  .hint{font-size:12px;color:var(--muted)}
+  #wrap{height:calc(100% - 52px)}
+  #chart{height:100%;width:100%}
+  .node circle{fill:var(--node);stroke:var(--area);stroke-width:1.2}
+  .node.area>circle{fill:var(--node);stroke:var(--area);stroke-width:1.6}
+  .node.area.open>circle{fill:var(--node-active);stroke:#93c5fd;stroke-width:2}
+  .node text{fill:var(--text);font-size:12px;text-anchor:middle;user-select:none}
+  .link{fill:none;stroke:var(--link);stroke-opacity:.65;stroke-width:1}
+  .legend{display:flex;gap:8px;flex-wrap:wrap}
+  .chip{background:#15224a;border:1px solid #243464;border-radius:999px;color:#cfe4ff;padding:3px 8px;font-size:12px}
+  a.ex{color:#cfe4ff}
+  .footer{position:fixed;right:10px;bottom:8px;color:var(--muted);font-size:12px}
+</style>
+<!-- D3 v7 (CDN). If offline/blocked by your platform, open this file as a separate page or self-host d3. -->
+<script src="https://unpkg.com/d3@7/dist/d3.min.js"></script>
+</head>
+<body>
+<header>
+  <div>
+    <h1>Grafo de Gamificação (colapsável)</h1>
+    <div class="hint">Clique em uma <b>área</b> para expandir/colapsar. Clique em um <b>exemplo</b> para abrir o link.</div>
+  </div>
+  <div class="legend">
+    <span class="chip">Centro: Gamificação</span>
+    <span class="chip">Primeiro anel: Áreas</span>
+    <span class="chip">Segundo anel: Exemplos</span>
+  </div>
+</header>
+<div id="wrap"><svg id="chart"></svg></div>
+<div class="footer">D3 radial cluster • setas/zoom do navegador funcionam normalmente</div>
+
+<script>
+/* ---------- Dados hierárquicos (edite aqui) ---------- */
+const DATA = {
+  name: "Gamificação",
+  children: [
+    {
+      name: "Educação",
+      url: null,
+      children: [
+        { name: "Kahoot!", url: "https://kahoot.com" },
+        { name: "Duolingo", url: "https://www.duolingo.com" },
+        { name: "Classcraft", url: "https://www.classcraft.com" }
+      ]
+    },
+    {
+      name: "Turismo & Cultura",
+      children: [
+        { name: "Pokémon GO", url: "https://pokemongolive.com" },
+        { name: "Ingress", url: "https://www.ingress.com" },
+        { name: "Museu do Amanhã (RJ)", url: "https://museudoamanha.org.br" }
+      ]
+    },
+    {
+      name: "Comércio & Marketing",
+      children: [
+        { name: "Starbucks Rewards", url: "https://www.starbucks.com/rewards" },
+        { name: "Nike Run Club", url: "https://www.nike.com/nrc-app" },
+        { name: "McDonald’s Monopoly", url: "https://en.wikipedia.org/wiki/McDonald%27s_Monopoly" }
+      ]
+    },
+    {
+      name: "Empresas & RH",
+      children: [
+        { name: "Salesforce Trailhead", url: "https://trailhead.salesforce.com" },
+        { name: "Microsoft Ribbon Hero", url: "https://en.wikipedia.org/wiki/Ribbon_Hero" },
+        { name: "Deloitte Academy", url: "https://www2.deloitte.com" }
+      ]
+    },
+    {
+      name: "Saúde & Bem-estar",
+      children: [
+        { name: "Fitbit", url: "https://www.fitbit.com" },
+        { name: "Apple Fitness+", url: "https://www.apple.com/apple-fitness-plus/" },
+        { name: "Zombies, Run!", url: "https://zombiesrungame.com" },
+        { name: "SuperBetter", url: "https://www.superbetter.com" }
+      ]
+    },
+    {
+      name: "Cidadania & Participação",
+      children: [
+        { name: "FixMyStreet", url: "https://www.fixmystreet.com" },
+        { name: "Zooniverse", url: "https://www.zooniverse.org" },
+        { name: "Decidim", url: "https://decidim.org" }
+      ]
+    },
+    {
+      name: "Sustentabilidade",
+      children: [
+        { name: "RecycleBank", url: "https://www.recyclebank.com" },
+        { name: "JouleBug", url: "https://www.joulebug.com" }
+      ]
+    },
+    {
+      name: "Finanças Pessoais",
+      children: [
+        { name: "Fortune City", url: "https://www.fortune.city" },
+        { name: "Gimi", url: "https://gimi.se" },
+        { name: "Step", url: "https://www.step.com" }
+      ]
+    },
+    {
+      name: "Treinamento & Pesquisa",
+      children: [
+        { name: "Foldit", url: "https://fold.it" },
+        { name: "Eyewire", url: "https://eyewire.org" },
+        { name: "Citizen Science Games", url: "https://www.citizenscience.gov/catalog/#" }
+      ]
+    }
+  ]
+};
+
+/* ---------- Setup ---------- */
+const svg = d3.select("#chart");
+const g = svg.append("g");
+const linkG = g.append("g").attr("class", "links");
+const nodeG = g.append("g").attr("class", "nodes");
+
+const margin = 18;
+let width = 900, height = 900, radius = Math.min(width, height) / 2 - 40;
+
+function resize(){
+  const W = document.getElementById('wrap').clientWidth;
+  const H = document.getElementById('wrap').clientHeight;
+  width = Math.max(600, W);
+  height = Math.max(500, H);
+  radius = Math.min(width, height) / 2 - 40;
+  svg.attr("viewBox", [ -width/2, -height/2, width, height ]);
+  update(); // re-render
+}
+window.addEventListener('resize', resize);
+
+/* ---------- Hierarquia + cluster radial ---------- */
+const root = d3.hierarchy(DATA);
+root.x0 = 0; root.y0 = 0;
+
+// start collapsed: areas closed, center open; show areas (not examples)
+root.children?.forEach(c => collapse(c));
+function collapse(d){
+  if(d.children){
+    d._children = d.children;
+    d._children.forEach(c => collapse(c));
+    d.children = null;
+  }
+}
+// but keep first-level areas visible initially
+root._children?.forEach(area => {
+  area.children = area._children; area._children = null; // expand areas
+});
+
+const cluster = d3.cluster()
+  .size([2*Math.PI, radius]);
+
+const diagonal = d3.linkRadial()
+  .angle(d => d.x)
+  .radius(d => d.y);
+
+/* ---------- Render ---------- */
+function update(source){
+  cluster(root);
+
+  // nodes data
+  const nodes = root.descendants();
+
+  // links (only between visible nodes)
+  const links = root.links();
+
+  // JOIN links
+  const link = linkG.selectAll("path.link")
+    .data(links, d => d.target.data.name + "-" + d.source.data.name);
+
+  // EXIT
+  link.exit().transition().duration(300).style("opacity", 0).remove();
+
+  // ENTER
+  link.enter()
+    .append("path")
+    .attr("class", "link")
+    .attr("d", d => diagonal({source: [source?.x0 ?? 0, source?.y0 ?? 0], target: [source?.x0 ?? 0, source?.y0 ?? 0]}))
+    .transition().duration(450)
+    .attr("d", diagonal);
+
+  // UPDATE
+  link.transition().duration(450).attr("d", diagonal);
+
+  // JOIN nodes
+  const node = nodeG.selectAll("g.node")
+    .data(nodes, d => d.data.name);
+
+  // EXIT
+  node.exit().transition().duration(300)
+    .style("opacity", 0)
+    .remove();
+
+  // ENTER
+  const nodeEnter = node.enter().append("g")
+    .attr("class", d => "node " + (d.depth === 1 ? "area" : ""))
+    .attr("transform", d => `rotate(${(source?.x0 ?? 0) * 180/Math.PI - 90}) translate(${source?.y0 ?? 0},0)`)
+    .style("cursor", d => (d.depth === 1 || d.depth === 2) ? "pointer" : "default")
+    .on("click", (event, d) => {
+      if (d.depth === 1) { // area: toggle children (examples)
+        if (d.children) { d._children = d.children; d.children = null; }
+        else { d.children = d._children; d._children = null; }
+        d3.select(event.currentTarget).classed("open", !!d.children);
+        update(d);
+      } else if (d.depth === 2 && d.data.url) { // example: open link
+        window.open(d.data.url, "_blank", "noopener");
+      }
+    });
+
+  nodeEnter.append("circle")
+    .attr("r", d => d.depth === 0 ? 20 : 12);
+
+  nodeEnter.append("text")
+    .attr("dy", "0.31em")
+    .text(d => d.data.name)
+    .each(wrapText(120))
+    .attr("transform", d => labelTransform(d))
+    .style("font-weight", d => d.depth === 0 ? 700 : 500);
+
+  // UPDATE merge
+  const nodeMerge = nodeEnter.merge(node);
+
+  nodeMerge.transition().duration(450)
+    .attr("transform", d => `rotate(${d.x * 180/Math.PI - 90}) translate(${d.y},0)`);
+
+  nodeMerge.select("circle")
+    .attr("r", d => d.depth === 0 ? 20 : 12);
+
+  nodeMerge
+    .classed("open", d => d.depth===1 && !!d.children);
+
+  // stash old positions
+  nodes.forEach(d => { d.x0 = d.x; d.y0 = d.y; });
+}
+
+function labelTransform(d){
+  const angle = d.x * 180/Math.PI;
+  // rotate text to keep readable
+  return (angle >= 90 && angle < 270)
+    ? `rotate(${180 - angle}) translate(${-18},0)`     // left side
+    : `rotate(${-angle}) translate(${18},0)`;          // right side
+}
+
+// simple word-wrap for SVG text into tspans
+function wrapText(maxWidth){
+  return function(d,i,nodes){
+    const text = d3.select(this);
+    const words = text.text().split(/\s+/).reverse();
+    let word, line=[], lineNumber=0;
+    const lineHeight = 1.1; // ems
+    const y = text.attr("y") || 0;
+    const xform = text.attr("transform");
+    const tspan = text.text(null).append("tspan").attr("x",0).attr("y",y).attr("dy","0em");
+    while (word = words.pop()){
+      line.push(word);
+      tspan.text(line.join(" "));
+      if (tspan.node().getComputedTextLength && tspan.node().getComputedTextLength() > maxWidth){
+        line.pop();
+        tspan.text(line.join(" "));
+        line = [word];
+        text.append("tspan")
+          .attr("x",0).attr("y",y)
+          .attr("dy", `${++lineNumber * lineHeight}em`)
+          .text(word);
+      }
+    }
+  }
+}
+
+function updateAll(){ update(root); }
+function update(){ updateAll; } // noop placeholder
+
+// actual first render
+resize();
+update(root);
+
+// optional zoom/pan (wheel to zoom, drag to pan)
+const zoom = d3.zoom().scaleExtent([0.6, 2]).on("zoom", (event)=> g.attr("transform", event.transform));
+svg.call(zoom).transition().duration(250).call(zoom.transform, d3.zoomIdentity);
+
+/* ---- Helpers to quickly toggle all areas (optional) ----
+   Press 'x' to collapse all; 'z' to expand all (examples)
+*/
+window.addEventListener('keydown', (e)=>{
+  if(e.key==='x'){ // collapse all examples
+    root.children?.forEach(a => { if(a.children){ a._children=a.children; a.children=null; } });
+    update(root);
+  } else if(e.key==='z'){ // expand all examples
+    root.children?.forEach(a => { if(a._children){ a.children=a._children; a._children=null; } });
+    update(root);
+  }
+});
+</script>
+</body>
+</html>
+

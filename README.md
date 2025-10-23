@@ -274,6 +274,7 @@
 <td><ul>
 <li>Aplicações da programação orientada a objetos em Java: frameworks <a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2025b/main/classes/24a/README.md">libGDX</a> e <a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/elc117/demo-javalin-codespace-2025b/main/README.md">Javalin</a></li>
 <li>Apresentação de exercícios: <a href="https://github.com/elc117/apresentacao-bim2-2025b-rnnr11">João Pedro</a>, <a href="https://github.com/elc117/apresentacao-bim2-2025b-lucassbertol">Lucas</a> e <a href="https://github.com/elc117/apresentacao-bim2-2025b-Renatronis">Renato</a></li>
+<li>Lançamento de tema do projeto final: <a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2025b/main/classes/gamification/README.md">gamificação</a></li>
 </ul></td>
 </tr>
 
