@@ -27,42 +27,44 @@ liascript-devserver --input README.md --port 3001 --live
 
 # Gamificação!
 
-- Educação
+Incorporar princípios de jogos em sistemas, atividades, etc. para engajar, motivar, melhorar algum aspecto
 
-  - [Kahoot!](https://kahoot.com)
-  - [Duolingo](https://www.duolingo.com)
+## Educação
 
-- Turismo e Cultura
+- [Kahoot!](https://kahoot.com)
+- [Duolingo](https://www.duolingo.com)
 
-  - [Jardim Botânico Quest](https://vmferreira.itch.io/jardim-botnico-quest)
-  - [Pokémon GO](https://pokemongolive.com)
+## Turismo e Cultura
 
-- Comércio e Marketing
+- [Jardim Botânico Quest](https://vmferreira.itch.io/jardim-botnico-quest)
+- [Pokémon GO](https://pokemongolive.com)
 
-  - [Starbucks Rewards](https://www.starbucks.com/rewards)
-  - [Nike Run Club](https://www.nike.com/nrc-app)
+## Comércio e Marketing
 
-- Empresas e RH
+- [Starbucks Rewards](https://www.starbucks.com/rewards)
+- [Nike Run Club](https://www.nike.com/nrc-app)
 
-  - [Gamification Tools for Recruitment Teams](https://oneupsales.com/blog/gamification-recruitment-tools): lista de algumas plataformas
+## Empresas e RH
 
-- Saúde e Bem-estar
+- [Gamification Tools for Recruitment Teams](https://oneupsales.com/blog/gamification-recruitment-tools): lista de algumas plataformas
 
-  - [Zombies, Run!](https://zombiesrungame.com)
+## Saúde e Bem-estar
 
-- Cidadania e Participação
+- [Zombies, Run!](https://zombiesrungame.com)
 
-  - [FixMyStreet](http://fixmystreet.org)
+## Cidadania e Participação
 
-- Sustentabilidade e Meio-Ambiente
+- [FixMyStreet](http://fixmystreet.org)
 
-  - [Seppo Use Case](https://seppo.io/blog/sustainability-talk-into-actions/): treinamento gamificado em ESG (Environmental, Social and Governance)
+## Sustentabilidade e Meio-Ambiente
 
-- Finanças e economia pessoal
+- [Seppo Use Case](https://seppo.io/blog/sustainability-talk-into-actions/): treinamento gamificado em ESG (Environmental, Social and Governance)
 
-  - Banco Inter / Nubank / C6: gamificam benefícios e níveis de fidelidade
-  - [Gimi](https://gimi.com/): finanças pessoais para crianças
+## Finanças e economia pessoal
 
-- Treinamento, Pesquisa e Inovação
+- Banco Inter / Nubank / C6: gamificam benefícios e níveis de fidelidade
+- [Gimi](https://gimi.com/): finanças pessoais para crianças
 
-  - [Eyewire](https://eyewire.org): mapeia conexões neurais através de puzzles visuais
+## Treinamento, Pesquisa e Inovação
+
+- [Eyewire](https://eyewire.org): mapeia conexões neurais através de puzzles visuais
