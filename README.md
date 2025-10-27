@@ -295,7 +295,8 @@
 <td>30/10/2025</td>
 <td>Qui</td>
 <td><ul>
-<li>Programação concorrente e orientada a objetos.</li>
+<li>Entrega de proposta de projeto final, conforme <a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2025b/main/classes/25/README.md">especificação</a></li>
+<li>Inspirações para o tema do projeto final: <a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2025b/main/classes/gamification/README.md">gamificação</a></li>
 </ul></td>
 </tr>
 
@@ -416,8 +417,8 @@ Primeiro bimestre:
 
 Segundo bimestre:
 
-- Apresentação de exercícios (peso 4)
-- Projeto final de programação (peso 6): apresentações em 27/11 e 02/12
+- Apresentação de exercícios (peso 2)
+- [Projeto final de programação](https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2025b/main/classes/25/README.md) (peso 8): apresentações em 27/11 e 02/12
 
 Avaliações finais / atividades de recuperação de avaliações: 04/12 e 09/12
 
