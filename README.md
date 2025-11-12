@@ -311,7 +311,7 @@
 </tr>
 
 <tr>
-<td align="right">27</td>
+<td align="right">-</td>
 <td>06/11/2025</td>
 <td>Qui</td>
 <td><ul>
@@ -321,30 +321,31 @@
 </tr>
 
 <tr>
-<td align="right">28</td>
+<td align="right">27</td>
 <td>11/11/2025</td>
 <td>Ter</td>
 <td><ul>
 <li>Apresentação de exercícios: <a href="https://github.com/elc117/apresentacao-bim2-2025b-bernardotbot">Bernardo</a>, <a href="https://github.com/elc117/apresentacao-bim2-2025b-DiogoDDSantos">Diogo</a>, <a href="https://github.com/elc117/apresentacao-bim2-2025b-gustavogfreitas">Gustavo</a> e <a href="https://github.com/elc117/apresentacao-bim2-2025b-Juranqt">Juran</a></li>
-<li><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2025b/main/classes/28/README.md">Programação concorrente e orientada a objetos.</a></li>
+<li><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2025b/main/classes/27/README.md">Programação concorrente e orientada a objetos.</a></li>
 </ul></td>
 </tr>
 
 <tr>
-<td align="right">-</td>
+<td align="right">28</td>
 <td>13/11/2025</td>
 <td>Qui</td>
 <td><ul>
-<li>-</li>
+<li>Apresentação de exercícios: <a href="https://github.com/elc117/apresentacao-bim2-2025b-MarcoSoaresL">Marco</a>, <a href="https://github.com/elc117/apresentacao-bim2-2025b-nilokao">Nicolas</a> e <a href="https://github.com/elc117/apresentacao-bim2-2025b-RPFacco">Ricardo</a></li>
+<li><a href="https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2025b/main/classes/28/README.md">Programação concorrente e orientada a objetos</a>: sincronização</li>
 </ul></td>
 </tr>
 
 <tr>
-<td align="right">-</td>
+<td align="right">29</td>
 <td>18/11/2025</td>
 <td>Ter</td>
 <td><ul>
-<li>-</li>
+<li>Apresentações de exercícios.</li>
 </ul></td>
 </tr>
 
@@ -367,7 +368,7 @@
 </tr>
 
 <tr>
-<td align="right">29</td>
+<td align="right">30</td>
 <td>27/11/2025</td>
 <td>Qui</td>
 <td><ul>
@@ -376,7 +377,7 @@
 </tr>
 
 <tr>
-<td align="right">30</td>
+<td align="right">31</td>
 <td>02/12/2025</td>
 <td>Ter</td>
 <td><ul>
@@ -385,7 +386,7 @@
 </tr>
 
 <tr>
-<td align="right">31</td>
+<td align="right">32</td>
 <td>04/12/2025</td>
 <td>Qui</td>
 <td><ul>
