@@ -345,7 +345,7 @@
 <td>18/11/2025</td>
 <td>Ter</td>
 <td><ul>
-<li>Apresentações de exercícios.</li>
+<li>Apresentações de exercícios: Adrian, Cauã, José Arthur, Josias, Júlio e Raffaela</li>
 </ul></td>
 </tr>
 

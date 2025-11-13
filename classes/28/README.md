@@ -101,7 +101,6 @@ adicionar café em pó ao leite com colher
 cortar fatia de pão com faca
 tostar fatia de pão na torradeira
 passar geleia no pão com faca
-
 ```
 
 Questões:
@@ -145,7 +144,6 @@ adicionar café em pó ao leite com colher
 cortar fatia de pão com faca
 tostar fatia de pão na torradeira
 passar geleia no pão com faca
-
 ```
 
 
@@ -204,6 +202,7 @@ class Conta {
   public void retira(float valor) {
     saldo -= valor;
   }
+}
 ```
 
 Classe `Operacoes` faz múltiplos depósitos e retiradas
@@ -273,7 +272,7 @@ class TransacoesBancarias {
 ### Zoom na execução
 
 - Sistema operacional escalona execução das threads
-- Tarefas podem ser interrompidas para que outras executem
+- Tarefas **podem ser interrompidas** para que outras executem
 - Ver "preemption": https://en.wikipedia.org/wiki/Preemption_%28computing%29
 - Depósitos e retiradas acarretam várias instruções na CPU
 - A seguir, veremos um "zoom" em uma execução em SO preemptivo
@@ -389,8 +388,8 @@ class Conta {
 
 - Por exemplo:
 
-  - TypeScript: http://web.mit.edu/6.031/www/fa21/classes/23-mutual-exclusion/
   - C: https://courses.cs.washington.edu/courses/cse333/20au/lectures/26-threads-code/lock_example.cc.html
+  - TypeScript: http://web.mit.edu/6.031/www/fa21/classes/23-mutual-exclusion/
 
 
 ### Entrevista com criador da linguagem Elixir
@@ -400,11 +399,11 @@ class Conta {
 - A criação de Elixir foi motivada por problemas de concorrência identificados em Ruby on Rails
 
 
-Entrevista (2020): https://youtu.be/roc-5euwalY 
+Entrevista canal Rocketseat / Podcast Faladev (2020): https://youtu.be/roc-5euwalY 
 
 
 
-<iframe width="1009" height="568" src="https://youtu.be/roc-5euwalY" title="DEV Talks #01 - José Valim" frameborder="0" allow="autoplay; clipboard-write; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="1009" height="568" src="https://youtu.be/roc-5euwalY" title="Rocketseat - Podcast Faladev #26" frameborder="0" allow="autoplay; clipboard-write; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
 
@@ -446,7 +445,7 @@ class SharedObjectExample {
 
 2. Suponha que existam várias threads acessando instâncias da classe SharedObjectExample. Qual das afirmações abaixo é correta a respeito do compartilhamento de objetos da classe SharedObjectExample?
 
-   - [( )] Objetos da classe SharedObjectExample sào sempre compartilhados entre threads.
+   - [( )] Objetos da classe SharedObjectExample são sempre compartilhados entre threads.
    - [(x)] O compartilhamento de objetos da classe SharedObjectExample é definido por quem usa a classe.
    - [( )] Objetos da classe SharedObjectExample não podem ser compartilhados porque são privados.
    - [( )] Objetos da classe SharedObjectExample são automaticamente `synchronized`, tornando-os thread-safe.
