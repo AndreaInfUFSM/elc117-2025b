@@ -345,7 +345,7 @@
 <td>18/11/2025</td>
 <td>Ter</td>
 <td><ul>
-<li>Apresentações de exercícios: Adrian, Cauã, José Arthur, Josias, Júlio e Raffaela</li>
+<li>Apresentações de exercícios: <a href="https://github.com/elc117/apresentacao-bim2-2025b-raffaelafl">Raffaela</a>, <a href="https://github.com/elc117/apresentacao-bim2-2025b-jap05">José Arthur</a>, <a href="https://github.com/elc117/apresentacao-bim2-2025b-Mufh">Josias</a>, <a href="https://github.com/elc117/apresentacao-bim2-2025b-Adrian351lang">Adrian</a>, <a href="https://github.com/elc117/apresentacao-bim2-2025b-cacoreco">Cauã</a> e <a href="https://github.com/elc117/apresentacao-bim2-2025b-julio-mansan2">Júlio</a></li>
 </ul></td>
 </tr>
 
@@ -363,7 +363,7 @@
 <td>25/11/2025</td>
 <td>Ter</td>
 <td><ul>
-<li>-</li>
+<li>Dia não letivo para a disciplina, mas estudantes podem agendar orientação para trabalhos finais.</li>
 </ul></td>
 </tr>
 
