@@ -372,7 +372,7 @@
 <td>27/11/2025</td>
 <td>Qui</td>
 <td><ul>
-<li>Apresentações de trabalhos finais de programação.</li>
+<li>Apresentações de trabalhos finais de programação: <a href="https://itch.io/jam/games-paradigmas-programacao-ufsm-2025b/entries">itch.io</a></li>
 </ul></td>
 </tr>
 
@@ -381,7 +381,7 @@
 <td>02/12/2025</td>
 <td>Ter</td>
 <td><ul>
-<li>Apresentações de trabalhos finais de programação.</li>
+<li>Apresentações de trabalhos finais de programação: <a href="https://itch.io/jam/games-paradigmas-programacao-ufsm-2025b/entries">itch.io</a></li>
 </ul></td>
 </tr>
 
